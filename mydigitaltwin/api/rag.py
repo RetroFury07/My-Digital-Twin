@@ -52,43 +52,58 @@ def generate_answer(question: str) -> str:
         return f"Error generating response: {str(e)}"
 
 
-def handler(request, response):
+def handler(request):
     """Vercel serverless function handler"""
+    from http.server import BaseHTTPRequestHandler
     
-    # Set CORS headers
-    response.headers["Access-Control-Allow-Origin"] = "*"
-    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    # CORS headers
+    headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Content-Type": "application/json"
+    }
     
     # Handle preflight requests
     if request.method == "OPTIONS":
-        response.status = 200
-        return response
+        return {
+            "statusCode": 200,
+            "headers": headers,
+            "body": ""
+        }
     
     # Only allow POST
     if request.method != "POST":
-        response.status = 405
-        response.json({"error": "Method not allowed"})
-        return response
+        return {
+            "statusCode": 405,
+            "headers": headers,
+            "body": json.dumps({"error": "Method not allowed"})
+        }
     
     try:
         # Parse request body
-        body = json.loads(request.body) if isinstance(request.body, str) else request.body
+        body = json.loads(request.body.decode('utf-8') if isinstance(request.body, bytes) else request.body)
         question = body.get("question", "").strip()
         
         if not question:
-            response.status = 400
-            response.json({"error": "'question' must be a non-empty string"})
-            return response
+            return {
+                "statusCode": 400,
+                "headers": headers,
+                "body": json.dumps({"error": "'question' must be a non-empty string"})
+            }
         
         # Generate answer
         answer = generate_answer(question)
         
-        response.status = 200
-        response.json({"answer": answer})
-        return response
+        return {
+            "statusCode": 200,
+            "headers": headers,
+            "body": json.dumps({"answer": answer})
+        }
         
     except Exception as e:
-        response.status = 500
-        response.json({"error": str(e)})
-        return response
+        return {
+            "statusCode": 500,
+            "headers": headers,
+            "body": json.dumps({"error": str(e)})
+        }
