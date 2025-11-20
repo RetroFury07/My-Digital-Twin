@@ -1,0 +1,1231 @@
+{
+  "personal": {
+    "name": "Tony Redgrave",
+    "title": "AI Systems Developer & Computer Vision Researcher",
+    "location": "Philippines",
+    "summary": "AI engineer and computer vision researcher specializing in real-time detection systems using YOLOv8, MediaPipe, and TensorFlow. Experienced in building intelligent proctoring and digital twin systems integrating cloud AI APIs.",
+    "elevator_pitch": "Hi, I’m Tony — an AI developer passionate about applying real-time computer vision and RAG systems to solve real-world problems. My work bridges academic innovation and production-ready AI deployments.",
+    "contact": {
+      "email": "tony.redgrave@example.com",
+      "linkedin": "https://linkedin.com/in/tonyredgrave",
+      "github": "https://github.com/tonyredgrave",
+      "portfolio": "https://tonyredgrave.dev"
+    }
+  },
+  "salary_location": {
+    "current_salary": "Fresh Graduate - No prior full-time salary",
+    "freelance_contract_history": "₱50,000 - ₱100,000 PHP for academic research contracts (2024)",
+    "salary_expectations": {
+      "junior_roles": "₱400,000 - ₱600,000 PHP annually (Entry-level Programmer, Junior Developer)",
+      "mid_level_roles": "₱600,000 - ₱800,000 PHP annually (AI Developer, Computer Vision Engineer)",
+      "specialized_roles": "₱800,000 - ₱1,000,000 PHP annually (Senior AI Engineer, ML Research Engineer with leadership)",
+      "minimum_acceptable": "₱400,000 PHP annually for entry-level roles with strong learning opportunities",
+      "ideal_target": "₱600,000 - ₱700,000 PHP for junior AI/ML engineer position",
+      "negotiable": true,
+      "priorities": "Learning opportunities, mentorship, and hands-on AI/ML work matter more than maximum salary",
+      "equity_interest": "Open to equity/stock options for startup roles",
+      "benefits_valued": ["Health insurance", "Learning budget", "Conference attendance", "Remote work flexibility", "Latest hardware/tools"]
+    },
+    "location_preferences": {
+      "primary": ["Metro Manila", "Quezon City", "Makati", "BGC (Bonifacio Global City)"],
+      "secondary": ["Cebu City", "Davao City", "Philippines - Remote"],
+      "international": ["Singapore", "Remote - APAC timezone"],
+      "preferred_setup": "Hybrid (2-3 days office, 2-3 days remote)"
+    },
+    "relocation_details": {
+      "willing_to_relocate": true,
+      "relocation_assistance_needed": "Yes for international moves",
+      "preferred_relocation_timeline": "2-3 months notice for domestic, 3-4 months for international",
+      "family_considerations": "Single, no dependents - flexible for relocation",
+      "housing_preference": "Near public transport or company shuttle"
+    },
+    "remote_work_experience": {
+      "total_years": "2+ years",
+      "setup": "Dedicated home office with high-speed fiber internet (100 Mbps), backup power supply",
+      "tools_proficient": ["Zoom", "Google Meet", "Slack", "Discord", "GitHub", "Notion", "Trello", "Asana"],
+      "timezone_flexibility": "Can work GMT+8 (PHT) or adjust ±3 hours for APAC teams",
+      "collaboration_experience": "Led remote team of 3 developers, coordinated across 2 time zones",
+      "communication_practices": "Daily standups, weekly sprint planning, async documentation via Notion",
+      "productivity_metrics": "Maintained 95%+ sprint completion rate in remote setting"
+    },
+    "travel_availability": {
+      "domestic_travel": "Up to 20% - willing to travel within Philippines for team meetings, conferences",
+      "international_travel": "Up to 10% - available for conferences, training, client meetings",
+      "passport_status": "Valid Philippine passport until 2030",
+      "visa_experience": "No prior international work visas",
+      "travel_preferences": "Prefer advance notice (2+ weeks) for international travel",
+      "conference_interest": "Eager to attend AI/ML conferences (NeurIPS, CVPR, PyCon)"
+    },
+    "work_authorization": {
+      "citizenship": "Philippine Citizen",
+      "visa_status": "No visa required for work in Philippines",
+      "international_work": "Would require work visa sponsorship for Singapore, US, EU, etc.",
+      "right_to_work": "Immediate right to work in Philippines",
+      "background_check": "Clean background - no criminal record",
+      "nbi_clearance": "Valid NBI clearance (National Bureau of Investigation)",
+      "tin_number": "Valid Tax Identification Number for Philippines employment"
+    },
+    "realistic_assessment": "Open to entry-level roles (₱400K+) with growth path to AI specialization, or mid-level AI roles (₱600K+) matching my skills. Prioritize company culture, learning opportunities, and AI project work over maximum salary.",
+    "salary_negotiation_factors": {
+      "will_accept_lower_for": ["Exceptional mentorship", "Cutting-edge AI projects", "Startup equity upside", "Strong team culture", "Clear promotion path"],
+      "expect_higher_for": ["Senior responsibilities", "Team leadership", "On-call duties", "Extensive travel", "Legacy codebase maintenance"],
+      "deal_breakers": ["Below ₱350K for full-time roles", "No benefits/health insurance", "Toxic work environment", "No AI/ML work for 1+ year"]
+    }
+  },
+  "experience": [
+    {
+      "company": "St. Paul University Philippines",
+      "title": "AI Research Developer — Powered Proctoring Project",
+      "duration": "2024 - Present",
+      "company_context": "Academic R&D project focusing on AI-assisted exam monitoring",
+      "team_structure": "2 developers, 1 research adviser, 1 data scientist",
+      "key_responsibilities": [
+        "Architected and developed end-to-end computer vision pipeline for real-time proctoring",
+        "Trained and fine-tuned YOLOv8 models on custom datasets of 5,000+ annotated images",
+        "Integrated multiple AI models (YOLOv8, MediaPipe, DeepSORT) into unified detection system",
+        "Optimized model inference speed to achieve 30 FPS on standard hardware",
+        "Conducted A/B testing and validation across 100+ exam sessions"
+      ],
+      "achievements_star": [
+        {
+          "situation": "Manual exam monitoring led to cheating incidents going undetected, affecting academic integrity for 500+ students.",
+          "task": "Develop a computer vision system to detect suspicious movements and gadgets in real-time with minimal false positives.",
+          "action": "Integrated YOLOv8, MediaPipe, and DeepSORT to detect hand gestures, head movements, and phone usage. Built custom training pipeline with data augmentation, implemented real-time alerting system, and optimized for low-latency inference.",
+          "result": "Achieved 92% detection accuracy with <5% false positive rate in controlled tests, improved proctoring efficiency by 60%, reduced manual monitoring workload by 40 hours/week, and successfully deployed across 3 departments."
+        },
+        {
+          "situation": "Team lacked expertise in computer vision and model training workflows.",
+          "task": "Upskill team members and establish best practices for ML development.",
+          "action": "Created comprehensive training materials, conducted weekly workshops on YOLOv8 architecture and dataset annotation, established Git workflow and code review processes.",
+          "result": "All team members became proficient in model training within 6 weeks, reduced annotation errors by 75%, and improved development velocity by 2x."
+        }
+      ],
+      "technical_skills_used": ["Python", "YOLOv8", "MediaPipe", "TensorFlow", "OpenCV", "NumPy", "Pandas", "DeepSORT", "Git", "Docker"],
+      "leadership_examples_star": [
+        {
+          "situation": "Project deadline approaching with team members struggling to annotate dataset accurately - 30% error rate in annotations",
+          "task": "Train team on proper annotation techniques and establish quality control process within 2 weeks",
+          "action": "Created step-by-step annotation guides with visual examples, conducted hands-on training sessions, implemented peer review system, set up validation scripts",
+          "result": "Reduced annotation errors from 30% to 7.5% (75% reduction), completed 5,000 image dataset on schedule, team became self-sufficient in annotation",
+          "leadership_skills_demonstrated": ["Training & Development", "Process Improvement", "Quality Assurance", "Documentation"]
+        },
+        {
+          "situation": "Academic panel skeptical about AI accuracy for high-stakes exam monitoring - threatened to cancel project funding",
+          "task": "Present technical evidence to convince panel and secure continued funding as technical lead",
+          "action": "Prepared comprehensive presentation with live demo, confusion matrices, A/B test results, addressed privacy concerns, proposed phased rollout plan",
+          "result": "Secured approval and ₱150,000 additional funding, gained panel support for 3-department deployment, established credibility for future AI projects",
+          "leadership_skills_demonstrated": ["Stakeholder Management", "Technical Communication", "Persuasion", "Strategic Planning"]
+        },
+        {
+          "situation": "Critical bug discovered 48 hours before major exam deployment affecting detection reliability",
+          "task": "Coordinate emergency debugging and resolution as project lead without delaying deployment",
+          "action": "Assembled team for war room session, systematically isolated issue to frame processing pipeline, implemented fix with thorough testing, coordinated deployment at 2 AM",
+          "result": "Deployed on schedule with zero defects, exam monitored 150 students successfully, demonstrated crisis management capability",
+          "leadership_skills_demonstrated": ["Crisis Management", "Technical Problem-Solving", "Team Coordination", "Under Pressure Performance"]
+        }
+      ],
+      "management_experience": {
+        "team_size_managed": 3,
+        "direct_reports": 0,
+        "indirect_reports": 2,
+        "hiring_involvement": "Participated in 2 team member selection processes",
+        "onboarding_responsibility": "Onboarded and trained 2 new team members",
+        "performance_reviews": "Conducted informal peer reviews, provided technical feedback",
+        "budget_managed": "₱50,000 equipment budget + ₱20,000 software/cloud costs",
+        "vendor_management": "Coordinated with 2 annotation service providers",
+        "project_management_tools": ["Git", "GitHub Issues", "Notion", "Google Docs", "Trello"]
+      },
+      "budget_managed": "₱50,000 project equipment budget",
+      "team_size_managed": 3,
+      "quantifiable_metrics": {
+        "detection_accuracy": "92%",
+        "false_positive_rate": "<5%",
+        "false_negative_rate": "8%",
+        "efficiency_improvement": "60%",
+        "time_saved": "40 hours/week for proctoring staff",
+        "cost_savings": "₱200,000 annually in manual monitoring costs",
+        "fps_achieved": "30 FPS (3x improvement from baseline 10 FPS)",
+        "inference_latency": "33ms per frame",
+        "model_size_reduction": "75% (44MB to 11MB via quantization)",
+        "dataset_size": "5,000+ annotated images",
+        "dataset_quality": "93% annotation accuracy after QA",
+        "training_time": "12 hours on single GPU (RTX 3060)",
+        "deployment_scale": "3 departments, 500+ students, 100+ exam sessions",
+        "uptime": "99.2% during exam periods",
+        "code_quality": "85% test coverage, 0 critical bugs in production",
+        "lines_of_code": "~8,000 lines Python across 25 modules",
+        "documentation": "150+ pages technical documentation + API docs",
+        "team_velocity": "2x improvement after training (from 20 to 40 story points/sprint)",
+        "sprint_completion": "95% average sprint completion rate over 6 months"
+      },
+      "cross_functional_collaboration": {
+        "stakeholders_managed": ["Academic panel (5 professors)", "IT department", "Exam coordinators", "Students (500+)"],
+        "departments_worked_with": ["IT Infrastructure", "Academic Affairs", "Student Services"],
+        "communication_frequency": "Weekly stakeholder meetings, daily team standups, bi-weekly demos",
+        "conflict_resolution_examples": [
+          "Resolved privacy concerns by implementing data anonymization and secure storage",
+          "Negotiated false positive tolerance with exam coordinators (balanced accuracy vs usability)"
+        ]
+      },
+      "mentoring_training_experience": {
+        "people_mentored": 2,
+        "mentoring_duration": "6 months ongoing",
+        "training_sessions_delivered": 12,
+        "topics_taught": ["YOLOv8 architecture", "Dataset annotation", "Python best practices", "Git workflow", "Model training pipelines"],
+        "mentee_outcomes": "Both mentees now independently train and deploy custom detection models",
+        "training_materials_created": "3 comprehensive guides (50+ pages each), 5 video tutorials",
+        "knowledge_sharing": "Weekly 'lunch and learn' sessions on ML topics"
+      }
+    }
+  ],
+  "skills": {
+    "technical": {
+      "programming_languages": [
+        {
+          "language": "Python", 
+          "version": "3.8+",
+          "years": 3, 
+          "proficiency": "Advanced",
+          "proficiency_rating": 4.5,
+          "proficiency_scale": "1-5 (5=Expert)",
+          "frameworks": [
+            {"name": "TensorFlow", "version": "2.x", "proficiency": 4, "years": 2},
+            {"name": "PyTorch", "version": "1.x/2.x", "proficiency": 4, "years": 2},
+            {"name": "OpenCV", "version": "4.x", "proficiency": 5, "years": 3},
+            {"name": "FastAPI", "version": "0.1x+", "proficiency": 4, "years": 1},
+            {"name": "Flask", "version": "2.x", "proficiency": 3, "years": 1.5},
+            {"name": "NumPy", "proficiency": 5, "years": 3},
+            {"name": "Pandas", "proficiency": 4, "years": 2.5},
+            {"name": "Scikit-learn", "proficiency": 4, "years": 2},
+            {"name": "Matplotlib/Seaborn", "proficiency": 4, "years": 2},
+            {"name": "Streamlit", "proficiency": 3, "years": 0.5}
+          ],
+          "expertise_areas": ["Computer Vision", "ML Model Training", "API Development", "Data Processing"],
+          "production_experience": "3 years - Built 5+ production systems handling 500+ users",
+          "code_examples": "https://github.com/tonyredgrave/powered-proctoring",
+          "lines_of_code_written": "~25,000+ lines across multiple projects",
+          "largest_codebase": "8,000 lines (Powered Proctoring System)",
+          "code_review_experience": "Reviewed 200+ pull requests, provided feedback to 4 team members",
+          "testing_practices": "Unit tests with pytest, integration tests, 80%+ coverage target",
+          "python_specific_skills": [
+            "Async programming (asyncio)",
+            "Type hints and mypy",
+            "Virtual environments (venv, conda)",
+            "Package management (pip, poetry)",
+            "Decorators and context managers",
+            "List/dict comprehensions",
+            "Lambda functions and functional programming",
+            "Object-oriented design patterns",
+            "Performance profiling (cProfile, line_profiler)"
+          ]
+        },
+        {
+          "language": "C++", 
+          "version": "C++11/14/17",
+          "years": 1, 
+          "proficiency": "Basic", 
+          "proficiency_rating": 2,
+          "proficiency_scale": "1-5 (5=Expert)",
+          "frameworks": [
+            {"name": "OpenCV (C++ API)", "proficiency": 2, "years": 0.5},
+            {"name": "Standard Template Library", "proficiency": 3, "years": 1}
+          ],
+          "expertise_areas": ["Algorithm Implementation", "Data Structures", "Performance Optimization"],
+          "production_experience": "Academic projects - implemented sorting algorithms, custom data structures, basic OpenCV integration",
+          "lines_of_code_written": "~2,000 lines (academic projects)",
+          "gaps_identified": "Limited production C++ experience - actively building portfolio with systems programming projects",
+          "learning_plan": "Currently developing: 1) Custom memory allocator, 2) Multi-threaded image processor, 3) Real-time object tracker in C++",
+          "honest_assessment": "Strong fundamentals but need more production C++ work to be job-ready for C++-heavy roles",
+          "cpp_specific_skills": [
+            "Pointers and memory management",
+            "STL containers (vector, map, set)",
+            "Basic templates",
+            "RAII principles",
+            "Smart pointers (unique_ptr, shared_ptr)",
+            "Basic multi-threading (std::thread)",
+            "CMake basics"
+          ],
+          "improvement_timeline": "Target production-level proficiency by March 2025 (3 months)"
+        },
+        {
+          "language": "JavaScript/TypeScript", 
+          "version": "ES6+/TypeScript 4.x+",
+          "years": 2, 
+          "proficiency": "Intermediate",
+          "proficiency_rating": 3.5,
+          "proficiency_scale": "1-5 (5=Expert)",
+          "frameworks": [
+            {"name": "Next.js", "version": "13+", "proficiency": 4, "years": 1},
+            {"name": "React", "version": "18+", "proficiency": 3.5, "years": 1.5},
+            {"name": "Node.js", "version": "16+", "proficiency": 3, "years": 2},
+            {"name": "Express", "version": "4.x", "proficiency": 3, "years": 1},
+            {"name": "Tailwind CSS", "proficiency": 4, "years": 1}
+          ],
+          "expertise_areas": ["Full-stack Development", "RESTful APIs", "Frontend Integration", "Server-Side Rendering"],
+          "lines_of_code_written": "~10,000 lines across web projects",
+          "production_experience": "Built 3 full-stack applications with Next.js and TypeScript",
+          "typescript_specific_skills": [
+            "Type definitions and interfaces",
+            "Generics",
+            "Async/await patterns",
+            "React hooks (useState, useEffect, custom hooks)",
+            "API route handlers",
+            "Client/server components (Next.js 13+)"
+          ]
+        },
+        {
+          "language": "SQL",
+          "version": "SQL:2011 standard",
+          "years": 2,
+          "proficiency": "Intermediate",
+          "proficiency_rating": 3,
+          "proficiency_scale": "1-5 (5=Expert)",
+          "frameworks": [
+            {"name": "PostgreSQL", "version": "12+", "proficiency": 3, "years": 1.5},
+            {"name": "MySQL", "version": "8.x", "proficiency": 3, "years": 1},
+            {"name": "SQLite", "proficiency": 3, "years": 2}
+          ],
+          "expertise_areas": ["Database Design", "Query Optimization", "Data Analysis", "Schema Design"],
+          "queries_written": "500+ queries across projects",
+          "database_size_experience": "Up to 100K records (academic projects)",
+          "sql_specific_skills": [
+            "Complex JOINs (INNER, LEFT, RIGHT)",
+            "Subqueries and CTEs",
+            "Aggregation functions (GROUP BY, HAVING)",
+            "Indexing strategies",
+            "Basic query optimization",
+            "Database normalization (1NF-3NF)",
+            "Transactions and ACID properties",
+            "ORMs (SQLAlchemy, Prisma)"
+          ]
+        }
+      ],
+      "databases": [
+        {"name": "Upstash Vector", "years": 1, "use_cases": ["RAG systems", "Semantic search", "Embeddings storage"]},
+        {"name": "PostgreSQL", "years": 2, "use_cases": ["Relational data", "CRUD operations", "Analytics"]},
+        {"name": "Firebase", "years": 1, "use_cases": ["Real-time data", "Authentication", "Cloud storage"]}
+      ],
+      "cloud_platforms": [
+        {"name": "Vercel", "experience": "Deployment and hosting for Next.js applications"},
+        {"name": "AWS EC2", "experience": "VM provisioning and model deployment"},
+        {"name": "Google Cloud", "experience": "Cloud storage and AI APIs"}
+      ],
+      "ai_ml": {
+        "computer_vision": ["YOLOv8", "YOLOv5", "MediaPipe", "OpenCV", "DeepSORT", "Object Detection", "Pose Estimation"],
+        "ml_frameworks": ["TensorFlow", "PyTorch", "Keras", "Scikit-learn"],
+        "nlp_rag": ["RAG Systems", "Vector Databases", "Embeddings", "LLMs", "Groq API", "MCP Server Protocol"],
+        "ml_ops": ["Model Training", "Hyperparameter Tuning", "Data Augmentation", "Model Optimization", "A/B Testing"],
+        "tools": ["Jupyter", "Google Colab", "Git", "Docker", "Weights & Biases"]
+      },
+      "development_tools": ["Git", "GitHub", "VS Code", "Docker", "Postman", "Linux/Unix"],
+      "testing_debugging": ["Unit Testing", "Integration Testing", "Model Validation", "Performance Profiling"]
+    },
+    "soft_skills": [
+      {
+        "skill": "Analytical Thinking",
+        "proficiency_rating": 5,
+        "examples": ["Debugging complex ML model issues", "Optimizing algorithm performance"],
+        "star_example": {
+          "situation": "Model producing 40% false positives - needed systematic approach to identify root cause",
+          "task": "Analyze failure patterns and determine if issue was data, model, or threshold-related",
+          "action": "Created confusion matrix, analyzed per-class metrics, visualized failure cases, conducted A/B tests on different thresholds",
+          "result": "Identified data imbalance as root cause, expanded dataset strategically, reduced false positives to <5%"
+        }
+      },
+      {
+        "skill": "Research & Documentation",
+        "proficiency_rating": 5,
+        "examples": ["Technical writing for academic papers", "Creating comprehensive project documentation"],
+        "star_example": {
+          "situation": "Project documentation scattered across multiple files - new team members taking 2 weeks to onboard",
+          "task": "Create centralized, comprehensive documentation to reduce onboarding time",
+          "action": "Wrote 150-page technical documentation covering architecture, API reference, training guides, troubleshooting. Used Notion for central repository with search functionality",
+          "result": "Reduced onboarding time from 2 weeks to 4 days, documentation referenced 500+ times over 6 months"
+        },
+        "documentation_created": "400+ pages across projects",
+        "writing_samples": "Published research paper (8 pages), 20+ technical blog posts"
+      },
+      {
+        "skill": "Team Collaboration",
+        "proficiency_rating": 4.5,
+        "examples": ["Cross-functional teamwork with data scientists", "Code reviews and pair programming"],
+        "star_example": {
+          "situation": "Team members working in silos, causing integration conflicts and duplicated work",
+          "task": "Establish collaborative practices to improve team efficiency",
+          "action": "Implemented daily standups, weekly sprint planning, pair programming sessions, GitHub pull request workflow",
+          "result": "Reduced integration conflicts by 80%, improved team velocity by 2x, achieved 95% sprint completion rate"
+        },
+        "collaboration_metrics": {
+          "pull_requests_reviewed": "200+",
+          "pair_programming_hours": "100+",
+          "team_meetings_facilitated": "50+",
+          "cross_team_projects": 3
+        }
+      },
+      {
+        "skill": "Problem Solving",
+        "proficiency_rating": 5,
+        "examples": ["Designing novel solutions for detection accuracy", "Troubleshooting deployment issues"],
+        "star_example": {
+          "situation": "Model inference too slow (10 FPS) for real-time monitoring - deployment at risk 2 weeks before launch",
+          "task": "Optimize performance to achieve 25+ FPS without sacrificing accuracy",
+          "action": "Profiled code to identify bottlenecks, implemented INT8 quantization, parallelized preprocessing, optimized frame capture",
+          "result": "Achieved 30 FPS (3x improvement) while maintaining 92% accuracy - deployed on schedule"
+        },
+        "problem_solving_approach": [
+          "Define problem clearly with metrics",
+          "Research existing solutions and best practices",
+          "Prototype multiple approaches",
+          "Test hypotheses with data",
+          "Implement optimal solution with monitoring"
+        ]
+      },
+      {
+        "skill": "Technical Communication",
+        "proficiency_rating": 4.5,
+        "examples": ["Presenting to non-technical stakeholders", "Teaching complex concepts to teammates"],
+        "star_example": {
+          "situation": "Academic panel skeptical about AI reliability - complex technical concepts causing confusion",
+          "task": "Explain YOLOv8 architecture and validation approach to non-technical audience",
+          "action": "Prepared visual presentation with analogies, live demo, simplified metrics (accuracy vs false positives), addressed concerns proactively",
+          "result": "Panel approved project with additional ₱150K funding, praised clarity of presentation"
+        },
+        "presentations_delivered": 15,
+        "audiences": ["Academic panels", "Technical teams", "Non-technical stakeholders", "Students"],
+        "presentation_tools": ["PowerPoint", "Google Slides", "Jupyter Notebooks", "Live demos"]
+      },
+      {
+        "skill": "Time Management",
+        "proficiency_rating": 4,
+        "examples": ["Managing multiple project deadlines", "Balancing academic and development work"],
+        "star_example": {
+          "situation": "Juggling thesis project, coursework, and 20-hour/week development work - risk of burnout",
+          "task": "Deliver all commitments without compromising quality or health",
+          "action": "Used time-blocking method, prioritized tasks with Eisenhower matrix, delegated annotation work, automated repetitive tasks",
+          "result": "Completed thesis on time (defended successfully), maintained 1.5 GPA, delivered project milestones with 95% on-time rate"
+        },
+        "productivity_tools": ["Notion", "Trello", "Google Calendar", "Pomodoro technique"],
+        "average_weekly_hours": "40-50 hours on development work"
+      },
+      {
+        "skill": "Adaptability",
+        "proficiency_rating": 5,
+        "examples": ["Learning new frameworks quickly", "Pivoting approaches based on feedback"],
+        "star_example": {
+          "situation": "Project requirements changed midway - needed to integrate RAG system within 2 weeks using unfamiliar tech stack",
+          "task": "Learn MCP protocol, vector databases, and implement RAG system quickly",
+          "action": "Intensive 3-day learning sprint (docs, tutorials, prototypes), built POC in 5 days, iterated based on feedback",
+          "result": "Delivered fully functional RAG system in 12 days, impressed stakeholders with rapid execution"
+        },
+        "technologies_learned_quickly": ["MCP Protocol (1 week)", "Upstash Vector (1 week)", "Next.js 13 (2 weeks)", "YOLOv8 (3 weeks)"],
+        "learning_approach": "Documentation → Tutorials → Build POC → Iterate"
+      },
+      {
+        "skill": "Leadership",
+        "proficiency_rating": 4,
+        "examples": ["Led 3-person team", "Mentored junior developers", "Coordinated stakeholders"],
+        "star_example": {
+          "situation": "New team formed with no defined processes - members uncertain about responsibilities",
+          "task": "Establish team structure, workflows, and culture as informal lead",
+          "action": "Facilitated team charter session, defined roles, implemented agile practices, established code standards",
+          "result": "Team became self-organizing within 4 weeks, achieved 95% sprint completion, zero attrition over 6 months"
+        },
+        "leadership_style": "Servant leadership - focus on enabling team success",
+        "leadership_training": "Completed online leadership course on Coursera"
+      },
+      {
+        "skill": "Conflict Resolution",
+        "proficiency_rating": 3.5,
+        "examples": ["Resolved technical disagreements", "Mediated stakeholder concerns"],
+        "star_example": {
+          "situation": "Team split on architecture decision - blocking progress for 1 week",
+          "task": "Facilitate decision-making process and reach consensus",
+          "action": "Organized structured debate with pros/cons, created decision matrix, ran small experiments to test approaches",
+          "result": "Team aligned on hybrid approach within 3 days, preserved team relationships, project moved forward"
+        }
+      }
+    ],
+    "agile_scrum_experience": {
+      "methodologies": ["Agile", "Scrum", "Kanban"],
+      "years_experience": 2,
+      "roles_held": [
+        {"role": "Development Team Member", "duration": "2 years"},
+        {"role": "Informal Scrum Master", "duration": "6 months"}
+      ],
+      "ceremonies_participated": [
+        {"ceremony": "Daily Standups", "frequency": "Daily (5 days/week)"},
+        {"ceremony": "Sprint Planning", "frequency": "Bi-weekly"},
+        {"ceremony": "Sprint Reviews/Demos", "frequency": "Bi-weekly"},
+        {"ceremony": "Retrospectives", "frequency": "Bi-weekly"},
+        {"ceremony": "Backlog Refinement", "frequency": "Weekly"}
+      ],
+      "sprint_metrics": {
+        "average_sprint_length": "2 weeks",
+        "average_velocity": "40 story points per sprint",
+        "sprint_completion_rate": "95%",
+        "defect_escape_rate": "<5%"
+      },
+      "agile_tools": ["Jira", "Trello", "GitHub Projects", "Notion"],
+      "user_story_experience": "Wrote 100+ user stories with acceptance criteria",
+      "estimation_techniques": ["Planning Poker", "T-shirt sizing", "Story points (Fibonacci)"]
+    },
+    "certifications": [
+      {
+        "name": "TensorFlow Developer Certificate",
+        "issuer": "TensorFlow",
+        "status": "In Progress",
+        "expected_completion": "Q1 2025",
+        "study_progress": "60% complete",
+        "topics_covered": ["CNN architectures", "Transfer learning", "Model deployment", "Data pipelines"],
+        "motivation": "Validate deep learning skills for ML engineer roles"
+      },
+      {
+        "name": "AWS Certified Cloud Practitioner",
+        "issuer": "Amazon Web Services",
+        "status": "Planned",
+        "expected_completion": "Q2 2025",
+        "study_progress": "20% complete",
+        "topics_to_cover": ["AWS core services", "Cloud architecture", "Security", "Pricing"],
+        "motivation": "Build cloud infrastructure skills for scalable ML deployments"
+      },
+      {
+        "name": "Deep Learning Specialization",
+        "issuer": "Coursera (Andrew Ng)",
+        "status": "Completed",
+        "completion_date": "2024",
+        "grade": "95%",
+        "skills_gained": ["Neural networks", "Optimization algorithms", "Hyperparameter tuning", "Computer vision"],
+        "certificate_url": "https://coursera.org/verify/specialization/XXXXX"
+      },
+      {
+        "name": "Git and GitHub Fundamentals",
+        "issuer": "Udemy",
+        "status": "Completed",
+        "completion_date": "2023",
+        "skills_gained": ["Version control", "Branching strategies", "Pull requests", "Code reviews"]
+      }
+    ],
+    "open_source_contributions": {
+      "total_contributions": "50+ contributions across 5 projects",
+      "projects": [
+        {
+          "project": "YOLOv8 (Ultralytics)",
+          "role": "Community Contributor",
+          "contributions": [
+            "Reported 3 bugs with reproducible examples",
+            "Participated in 20+ GitHub discussions helping users",
+            "Shared training tips and custom configuration examples",
+            "Contributed to documentation improvements (minor PRs)"
+          ],
+          "impact": "Helped 50+ community members resolve training issues",
+          "github_url": "https://github.com/ultralytics/ultralytics"
+        },
+        {
+          "project": "OpenCV",
+          "role": "Bug Reporter",
+          "contributions": [
+            "Reported 2 bugs in Python bindings",
+            "Provided detailed reproduction steps",
+            "Tested proposed fixes"
+          ],
+          "github_url": "https://github.com/opencv/opencv"
+        },
+        {
+          "project": "Internal Python ML Utilities",
+          "role": "Creator & Maintainer",
+          "contributions": [
+            "Created reusable ML training utilities library",
+            "Used by 5+ research projects at university",
+            "Maintained documentation and examples",
+            "Provided support to other researchers"
+          ],
+          "impact": "Saved 100+ hours of development time across projects",
+          "technologies": ["Python", "TensorFlow", "PyTorch", "MLflow"]
+        }
+      ],
+      "contribution_types": {
+        "code_commits": 15,
+        "bug_reports": 8,
+        "documentation": 10,
+        "discussions_participated": 40,
+        "issues_helped_resolve": 20
+      },
+      "github_stats": {
+        "profile_url": "https://github.com/tonyredgrave",
+        "public_repos": 12,
+        "total_commits_2024": "500+",
+        "longest_streak": "45 days",
+        "stars_received": "50+ across projects",
+        "followers": 30
+      }
+    },
+    "conference_speaking_technical_writing": {
+      "conference_presentations": [
+        {
+          "conference": "AI Research Symposium 2024",
+          "role": "Presenter",
+          "topic": "Real-time Computer Vision for Academic Integrity: Lessons from Powered Proctoring",
+          "date": "October 2024",
+          "audience_size": "100+ attendees",
+          "format": "30-minute presentation + 15-minute Q&A",
+          "feedback_score": "4.5/5",
+          "recording_available": false
+        },
+        {
+          "conference": "PyCon Philippines 2024",
+          "role": "Attendee",
+          "date": "February 2024",
+          "key_learnings": ["ML deployment best practices", "Python optimization", "FastAPI patterns"],
+          "networking": "Connected with 20+ Python developers"
+        }
+      ],
+      "technical_writing": {
+        "blog_posts": [
+          {
+            "title": "Optimizing YOLOv8 Inference: From 10 FPS to 30 FPS",
+            "platform": "Medium / Personal Blog",
+            "date": "September 2024",
+            "word_count": 2500,
+            "views": "500+",
+            "topics": ["Model quantization", "Pipeline optimization", "Performance profiling"],
+            "url": "https://tonyredgrave.dev/blog/yolov8-optimization"
+          },
+          {
+            "title": "Building Production-Ready RAG Systems with MCP Protocol",
+            "platform": "Dev.to",
+            "date": "October 2024",
+            "word_count": 3000,
+            "views": "300+",
+            "topics": ["RAG architecture", "Vector databases", "MCP protocol"],
+            "url": "https://dev.to/tonyredgrave/rag-mcp"
+          }
+        ],
+        "documentation_authored": [
+          "Powered Proctoring Technical Documentation (150 pages)",
+          "YOLOv8 Training Guide for Team (50 pages)",
+          "API Documentation with OpenAPI/Swagger"
+        ],
+        "academic_publications": [
+          {
+            "title": "Powered Proctoring: Real-time Exam Cheating Detection System Using YOLOv8 and MediaPipe",
+            "type": "Research Paper",
+            "venue": "St. Paul University Research Journal",
+            "year": 2025,
+            "status": "Published",
+            "co_authors": 2,
+            "citations": 3,
+            "pages": 12,
+            "keywords": ["Computer Vision", "YOLOv8", "Academic Integrity", "Real-time Detection"]
+          }
+        ],
+        "total_words_written": "50,000+ words across documentation and articles"
+      },
+      "public_speaking_skills": {
+        "comfort_level": "High - comfortable with technical and non-technical audiences",
+        "presentation_count": "15+ presentations",
+        "largest_audience": "100+ people",
+        "presentation_topics": ["Computer Vision", "ML Optimization", "AI Ethics", "Technical Architecture"],
+        "improvement_areas": "Want to speak at larger international conferences (NeurIPS, CVPR)"
+      }
+    }
+  },
+  "education": {
+    "university": "St. Paul University Philippines",
+    "degree": "Bachelor of Science in Information Technology",
+    "graduation_year": 2025,
+    "gpa": "1.5 (Very Good)",
+    "relevant_coursework": ["Artificial Intelligence", "Machine Learning", "Computer Vision", "Data Science"],
+    "thesis_project": "Powered Proctoring: Real-time Exam Cheating Detection System Using Computer Vision"
+  },
+  "projects_portfolio": [
+    {
+      "name": "Powered Proctoring System",
+      "project_type": "Production AI System",
+      "description": "Real-time cheating detection using YOLOv8, MediaPipe, and DeepSORT for academic exam monitoring.",
+      "detailed_description": "End-to-end computer vision system that monitors students during exams and detects suspicious behaviors including phone usage, unusual head movements, and hand gestures. Features real-time alerting, customizable detection thresholds, and comprehensive reporting dashboard.",
+      "star_format": {
+        "situation": "University experiencing 15-20 cheating incidents per semester detected through manual monitoring, affecting academic integrity for 500+ students across 3 departments. Manual proctoring required 2 staff members per exam room, costing ₱200K annually in labor.",
+        "task": "Design and implement an AI-powered proctoring system to automatically detect suspicious behaviors in real-time with 90%+ accuracy and <10% false positive rate, reducing manual monitoring workload by 50%+.",
+        "action": [
+          "Conducted stakeholder interviews with exam coordinators to define suspicious behaviors taxonomy (7 behavior types identified)",
+          "Collected and annotated 5,000+ images covering diverse scenarios (lighting conditions, student demographics, seating positions)",
+          "Architected multi-model system: YOLOv8 for object detection (phones, papers), MediaPipe for pose estimation, DeepSORT for tracking",
+          "Implemented custom training pipeline with data augmentation (brightness, rotation, noise) achieving 93% validation accuracy",
+          "Optimized inference from 10 FPS to 30 FPS via INT8 quantization (44MB→11MB) and parallel preprocessing",
+          "Built Flask-based alerting system with configurable sensitivity and real-time dashboard for proctors",
+          "Conducted 100+ exam sessions for validation, iteratively reducing false positives from 40% to <5%",
+          "Presented findings to academic panel, secured ₱150K additional funding for deployment"
+        ],
+        "result": [
+          "Achieved 92% detection accuracy with <5% false positive rate in production",
+          "Reduced manual monitoring workload by 60% (from 40 hours/week to 16 hours/week)",
+          "Successfully deployed across 3 departments monitoring 500+ students over 100+ exam sessions",
+          "Saved ₱200K annually in manual proctoring costs",
+          "Published research paper, cited in 3 follow-up studies",
+          "99.2% system uptime during exam periods (only 1 outage in 6 months)",
+          "Improved exam cheating detection rate from 60% (manual) to 92% (AI-assisted)",
+          "Reduced false accusations by 75% compared to manual observation"
+        ]
+      },
+      "technologies": ["Python 3.10", "TensorFlow 2.x", "YOLOv8", "OpenCV 4.x", "MediaPipe", "DeepSORT", "NumPy", "Pandas", "Flask 2.x", "Docker", "Git"],
+      "role": "Lead Developer & Architect",
+      "team_size": 4,
+      "duration": "8 months (January 2024 - August 2024)",
+      "project_budget": "₱220,000 (equipment + cloud + software)",
+      "key_features": [
+        "Multi-model integration for comprehensive detection",
+        "Real-time inference at 30 FPS on standard hardware (RTX 3060)",
+        "Custom-trained models on 5,000+ annotated images",
+        "Alerting system with configurable sensitivity (3 levels: low, medium, high)",
+        "Analytics dashboard for proctors with historical data",
+        "Privacy-preserving design (local processing, no cloud storage of video)",
+        "Automated report generation with incident timestamps"
+      ],
+      "impact": "Enhanced academic integrity through AI-based monitoring. Deployed across 3 departments, monitoring 500+ students, achieving 92% accuracy with <5% false positives.",
+      "challenges_overcome": [
+        {
+          "challenge": "Slow inference speed (10 FPS) inadequate for real-time monitoring",
+          "solution": "INT8 quantization + parallel preprocessing + optimized frame capture",
+          "result": "30 FPS (3x improvement), 0% accuracy loss"
+        },
+        {
+          "challenge": "40% false positive rate causing student complaints",
+          "solution": "Expanded dataset diversity (2K→5K images) + ensemble voting + adjusted confidence thresholds",
+          "result": "<5% false positive rate (87.5% reduction)"
+        },
+        {
+          "challenge": "Team lacking computer vision expertise",
+          "solution": "Created training materials, conducted 12 workshops, established peer review process",
+          "result": "Team proficient in 6 weeks, 75% reduction in annotation errors"
+        },
+        {
+          "challenge": "Privacy concerns from academic panel",
+          "solution": "Implemented local processing, data anonymization, secure storage with encryption",
+          "result": "Panel approval + ₱150K additional funding"
+        }
+      ],
+      "quantified_metrics": {
+        "detection_accuracy": "92%",
+        "precision": "95%",
+        "recall": "89%",
+        "f1_score": "0.92",
+        "false_positive_rate": "<5% (reduced from 40%)",
+        "false_negative_rate": "8%",
+        "fps_achieved": "30 FPS (3x improvement from 10 FPS baseline)",
+        "inference_latency": "33ms per frame",
+        "model_size_reduction": "75% (44MB → 11MB)",
+        "students_monitored": "500+",
+        "exam_sessions": "100+",
+        "departments_deployed": 3,
+        "uptime": "99.2%",
+        "manual_workload_reduction": "60% (40 hrs/week → 16 hrs/week)",
+        "cost_savings": "₱200,000 annually",
+        "detection_improvement": "53% (60% manual → 92% AI-assisted)",
+        "false_accusation_reduction": "75%",
+        "dataset_size": "5,000+ annotated images",
+        "annotation_accuracy": "93%",
+        "training_time": "12 hours on RTX 3060",
+        "code_coverage": "85%",
+        "lines_of_code": "~8,000 Python across 25 modules",
+        "documentation": "150 pages technical docs + API docs"
+      },
+      "technical_deep_dive": {
+        "model_architecture": "YOLOv8m (medium variant) fine-tuned on custom dataset",
+        "training_details": {
+          "epochs": 100,
+          "batch_size": 16,
+          "optimizer": "AdamW",
+          "learning_rate": "0.001 with cosine annealing",
+          "augmentation": "Albumentations (brightness, rotation, noise, blur)",
+          "validation_split": "80/20 train/val"
+        },
+        "deployment": {
+          "hardware": "RTX 3060 GPU (12GB VRAM)",
+          "framework": "TensorFlow Lite for inference",
+          "containerization": "Docker for reproducibility",
+          "monitoring": "Custom metrics dashboard with Prometheus"
+        }
+      },
+      "github_url": "https://github.com/tonyredgrave/powered-proctoring",
+      "live_demo": "",
+      "status": "Production",
+      "awards_recognition": [
+        "Best Capstone Project 2024 - St. Paul University IT Department",
+        "Featured in University Research Newsletter (November 2024)"
+      ]
+    },
+    {
+      "name": "Digital Twin RAG System",
+      "project_type": "Full-Stack AI Application",
+      "description": "AI-driven interview assistant using RAG and vector embeddings for personalized career preparation.",
+      "detailed_description": "Intelligent system that creates a digital representation of a candidate's profile and enables AI-powered interviews using Retrieval-Augmented Generation. Integrates with MCP servers for seamless knowledge retrieval and supports multi-turn conversational interviews.",
+      "star_format": {
+        "situation": "Job seekers struggle with interview preparation, receiving generic advice that doesn't leverage their specific experiences. Traditional resume reviews lack personalization and real-time practice scenarios.",
+        "task": "Build an AI interview assistant that understands a candidate's unique profile and conducts realistic interview simulations with personalized feedback using Retrieval-Augmented Generation.",
+        "action": [
+          "Designed RAG architecture using vector embeddings for semantic search of candidate profile",
+          "Implemented MCP (Model Context Protocol) server for extensible knowledge base integration",
+          "Built FastAPI backend with endpoints for profile management, embedding generation, and interview simulation",
+          "Developed Next.js 13 frontend with TypeScript, server components, and Tailwind CSS for responsive design",
+          "Integrated Upstash Vector database for efficient similarity search (sub-2s query latency)",
+          "Connected Groq API (Llama 3.1) for fast LLM inference with RAG-enhanced context",
+          "Implemented multi-turn conversation handling with context preservation",
+          "Added comprehensive interview scenarios: behavioral (STAR format), technical deep-dives, situational judgments"
+        ],
+        "result": [
+          "Achieved <2 second average response time for interview questions",
+          "High semantic relevance in retrieved context (95%+ relevance based on user testing)",
+          "Supports 3 interview types with 50+ question templates",
+          "Successfully deployed on Vercel with 99.5% uptime",
+          "Reduced interview prep time from hours of googling to 30-minute targeted sessions",
+          "Received positive feedback from 10 beta testers (4.5/5 rating)"
+        ]
+      },
+      "technologies": ["Python 3.10", "Upstash Vector", "Groq API (Llama 3.1)", "Next.js 13", "FastAPI", "TypeScript", "Tailwind CSS", "Vercel", "Git"],
+      "role": "Full-Stack Developer (Solo)",
+      "team_size": 1,
+      "duration": "1 month (October 2024 - November 2024)",
+      "project_budget": "Self-funded ($50 for cloud services)",
+      "key_features": [
+        "Vector-based semantic search for profile information (1536-dim embeddings)",
+        "MCP server integration for extensible knowledge base",
+        "Next.js 13 frontend with responsive design (mobile-first)",
+        "RESTful API for profile management (CRUD operations)",
+        "Real-time interview simulation with streaming responses",
+        "Context-aware follow-up questions based on candidate's answers",
+        "Interview performance analytics and improvement suggestions"
+      ],
+      "impact": "Enabled personalized interview preparation using AI knowledge retrieval. Supports multiple interview scenarios and provides actionable feedback.",
+      "challenges_overcome": [
+        {
+          "challenge": "Learning MCP protocol within 1 week for project deadline",
+          "solution": "Intensive 3-day documentation study + built POC in 2 days + iterated based on testing",
+          "result": "Delivered functional MCP integration in 7 days"
+        },
+        {
+          "challenge": "Optimizing embedding generation for large profiles (5000+ words)",
+          "solution": "Chunking strategy (500-word segments with 50-word overlap) + batch processing",
+          "result": "Reduced embedding time from 30s to 5s (6x improvement)"
+        },
+        {
+          "challenge": "Ensuring context relevance in RAG retrieval",
+          "solution": "Semantic reranking + hybrid search (vector + keyword) + threshold filtering (>0.7 similarity)",
+          "result": "95%+ context relevance based on user feedback"
+        }
+      ],
+      "quantified_metrics": {
+        "average_response_time": "1.8 seconds",
+        "embedding_generation_time": "5 seconds for 5000-word profile",
+        "retrieval_accuracy": "95%+ semantic relevance",
+        "supported_interview_types": 3,
+        "question_templates": "50+",
+        "uptime": "99.5% (Vercel deployment)",
+        "api_latency": "<200ms (FastAPI endpoints)",
+        "vector_database_size": "500+ embeddings",
+        "frontend_load_time": "1.2s (PageSpeed Insights score: 95)",
+        "user_rating": "4.5/5 (10 beta testers)",
+        "code_coverage": "70%",
+        "lines_of_code": "~3,500 (2000 Python, 1500 TypeScript)",
+        "deployment_cost": "$10/month (Upstash + Vercel)"
+      },
+      "technical_deep_dive": {
+        "rag_architecture": {
+          "embedding_model": "text-embedding-ada-002 (OpenAI)",
+          "vector_database": "Upstash Vector",
+          "llm": "Llama 3.1 70B via Groq API",
+          "chunking_strategy": "500-word segments with 50-word overlap",
+          "retrieval_method": "Hybrid (vector similarity + keyword matching)",
+          "reranking": "Semantic similarity threshold (>0.7)"
+        },
+        "deployment": {
+          "frontend": "Vercel (Edge Functions)",
+          "backend": "Vercel Serverless Functions (FastAPI)",
+          "database": "Upstash Vector (Redis-compatible)",
+          "monitoring": "Vercel Analytics + Custom logging"
+        }
+      },
+      "github_url": "https://github.com/tonyredgrave/digital-twin-workshop",
+      "live_demo": "https://digitaltwin.vercel.app (pending)",
+      "status": "Active Development",
+      "future_enhancements": [
+        "Add voice interview mode with speech-to-text",
+        "Implement company-specific interview prep (parse job postings)",
+        "Add interview recording and playback for self-review",
+        "Integrate with LinkedIn for automatic profile import"
+      ]
+    },
+    {
+      "name": "Custom Object Detection Model Trainer",
+      "description": "Automated pipeline for training custom YOLOv8 models with data augmentation and hyperparameter tuning.",
+      "detailed_description": "Reusable ML training pipeline that streamlines the process of creating custom object detection models. Includes automated data augmentation, k-fold cross-validation, hyperparameter optimization, and model evaluation metrics.",
+      "technologies": ["Python", "YOLOv8", "Ultralytics", "Albumentations", "Weights & Biases", "Docker"],
+      "role": "Creator & Maintainer",
+      "key_features": [
+        "Automated data preprocessing and augmentation",
+        "Hyperparameter tuning with Optuna",
+        "Experiment tracking with W&B",
+        "Dockerized for reproducibility",
+        "Support for multiple annotation formats"
+      ],
+      "impact": "Reduced model training time by 50% through automation. Used across multiple internal projects for rapid prototyping.",
+      "github_url": "https://github.com/tonyredgrave/yolo-trainer",
+      "live_demo": "",
+      "status": "Completed"
+    },
+    {
+      "name": "C++ Performance Optimization Projects (In Development)",
+      "description": "Building production-ready C++ projects to strengthen systems programming skills identified as career gap.",
+      "detailed_description": "Portfolio of C++ projects addressing skill gap: 1) Multi-threaded image processing pipeline with OpenCV C++ API, 2) Custom memory pool allocator for high-performance object creation, 3) Real-time object tracker using C++ YOLO integration.",
+      "technologies": ["C++17", "OpenCV C++ API", "CMake", "Google Test", "Threading", "Smart Pointers"],
+      "role": "Solo Developer",
+      "key_features": [
+        "Multi-threading for parallel image processing",
+        "Custom memory management for performance-critical code",
+        "Modern C++ practices (RAII, smart pointers, move semantics)",
+        "Unit testing with Google Test",
+        "CMake build system"
+      ],
+      "impact": "Addressing C++ proficiency gap identified in job applications. Target: production-level C++ skills within 3 months.",
+      "challenges_overcome": [
+        "Learning C++ best practices through code reviews",
+        "Implementing thread-safe data structures",
+        "Optimizing memory allocation patterns"
+      ],
+      "metrics": {
+        "target_completion": "March 2025",
+        "projects_planned": 3,
+        "current_status": "Project 1 in progress"
+      },
+      "github_url": "https://github.com/tonyredgrave/cpp-projects",
+      "live_demo": "",
+      "status": "Active Development",
+      "honest_note": "Proactively building C++ portfolio after interview feedback identified this as career blocker for certain roles"
+    }
+  ],
+  "career_goals": {
+    "short_term": "Secure an AI/ML developer role focusing on computer vision, RAG systems, or intelligent applications. Open to junior roles with clear AI specialization path.",
+    "long_term": "Lead AI research and development teams to build real-world impactful systems in education, healthcare, or public safety.",
+    "ideal_roles": [
+      "Junior AI/ML Engineer (Computer Vision focus)",
+      "Computer Vision Developer",
+      "AI Research Engineer",
+      "Machine Learning Developer",
+      "Software Engineer with AI/ML projects"
+    ],
+    "not_ideal_roles": [
+      "Generic entry-level programmer (unless clear AI growth path)",
+      "Roles requiring extensive C++ production experience",
+      "Pure frontend/backend developer without ML component",
+      "Maintenance-heavy legacy code positions"
+    ],
+    "learning_focus": ["RAG Systems", "Computer Vision", "Edge AI Deployment", "AI Ethics", "Production ML Systems", "Distributed Systems"],
+    "industries_interested": ["AI/ML", "EdTech", "Research and Development", "HealthTech", "Startups with AI products"],
+    "honest_about_fit": "I'm most valuable in roles leveraging my AI/ML expertise. For general programming roles, I'd need clear career progression toward AI specialization to maintain long-term engagement."
+  },
+  "interview_prep": {
+    "common_questions": {
+      "behavioral": [
+        {
+          "question": "Tell me about a time you overcame a technical challenge under pressure.",
+          "answer_framework": "During the Powered Proctoring project, our model had only 10 FPS performance which was inadequate for real-time monitoring. Under a tight 2-week deadline, I researched and implemented model quantization and optimized the inference pipeline, achieving 30 FPS. This taught me the importance of performance profiling and iterative optimization.",
+          "improved_star_format": {
+            "situation": "Two weeks before our academic presentation, our proctoring system ran at 10 FPS - too slow for real-time detection. The academic panel would only approve production deployment if we achieved 25+ FPS.",
+            "task": "As lead developer, I needed to optimize inference speed by 2.5x in 14 days without sacrificing accuracy.",
+            "action": "I profiled the code and found bottlenecks in model inference and frame processing. I implemented INT8 quantization (reducing model size from 44MB to 11MB), parallelized preprocessing in separate threads, and optimized frame capture with OpenCV. I validated each optimization with A/B tests to ensure accuracy remained above 90%.",
+            "result": "Achieved 30 FPS (3x improvement) while maintaining 92% accuracy. The academic panel approved deployment, and the system now monitors 500+ students across 3 departments. This taught me that systematic profiling beats guessing, and that performance optimization is a data-driven process.",
+            "quantified_impact": "3x speed improvement, 0% accuracy loss, approved for production use"
+          }
+        },
+        {
+          "question": "Describe a project where you led a team through research and development.",
+          "answer_framework": "I led the Powered Proctoring project with 3 team members. I designed the architecture, established Git workflows, conducted weekly training sessions on YOLOv8, and mentored a junior developer. We successfully deployed across 3 departments with 92% accuracy. My leadership approach focuses on knowledge sharing and clear communication."
+        },
+        {
+          "question": "Tell me about a time you failed and what you learned.",
+          "answer_framework": "In early model training, I had 40% false positives because I didn't account for diverse lighting conditions. I learned the importance of comprehensive data collection and augmentation. I rebuilt the dataset with varied scenarios, implemented augmentation techniques, and reduced false positives to <5%. This taught me to think holistically about edge cases.",
+          "improved_star_format": {
+            "situation": "After initial deployment of our proctoring system, we received complaints about 40% false positive rate - students were flagged incorrectly for cheating during legitimate activities like adjusting posture.",
+            "task": "I owned the mistake and committed to reducing false positives below 5% within one month while maintaining detection accuracy.",
+            "action": "I analyzed failure cases and discovered I hadn't collected training data across diverse lighting conditions and student behaviors. I expanded our dataset from 2,000 to 5,000 images covering varied scenarios (bright/dim lighting, different skin tones, various seating positions). I implemented data augmentation (brightness, rotation, noise) and retrained the model with adjusted confidence thresholds. I also added an ensemble voting system combining YOLOv8 and MediaPipe to reduce single-model errors.",
+            "result": "Reduced false positives from 40% to <5% over 4 weeks while maintaining 92% true positive rate. More importantly, I learned that diverse, representative training data is crucial for production ML systems. I now always plan for edge cases upfront and involve end-users in data collection.",
+            "lesson_learned": "Failure taught me humility and the importance of comprehensive testing. I now use confusion matrices, per-class analysis, and real-world validation before claiming 'production-ready'.",
+            "growth_demonstrated": "Took ownership, systematically debugged, implemented lasting solution, documented learnings for future projects"
+          }
+        },
+        {
+          "question": "Why are you applying for this entry-level role when you have AI research experience?",
+          "answer_framework": {
+            "honest_answer": "I understand this might seem like a step backward, but here's my thinking: First, I want to build strong software engineering fundamentals beyond just ML - things like production code quality, testing, CI/CD, and working in larger codebases. Second, I'm specifically drawn to [mention specific aspect from job posting]. Third, I'm early in my career and value learning from experienced engineers over having a fancy title. That said, I'm most motivated by roles where I can apply AI skills - can you share if there are AI projects in the pipeline?",
+            "key_points": [
+              "Focus on engineering fundamentals, not just AI",
+              "Show genuine interest in specific aspects of THIS role",
+              "Emphasize learning over title",
+              "Gently probe for AI opportunities",
+              "Demonstrate long-term thinking"
+            ],
+            "avoid": [
+              "Don't say 'I'll take any job'",
+              "Don't overemphasize AI skills (reinforces overqualification concern)",
+              "Don't be vague - reference specific job posting details"
+            ]
+          }
+        },
+        {
+          "question": "How do you handle ambiguity when developing AI solutions?",
+          "answer_framework": "I start with research and prototyping. For the proctoring system, initial requirements were vague about 'suspicious behavior.' I conducted stakeholder interviews, created a taxonomy of behaviors, built multiple prototypes, and used A/B testing to validate approaches. I believe in iterative development with continuous feedback."
+        }
+      ],
+      "technical": [
+        {
+          "question": "Explain how YOLOv8 detects and classifies objects.",
+          "answer_framework": "YOLOv8 uses a single-stage detector with a CSPDarknet backbone for feature extraction, PANet for feature fusion, and a decoupled head for classification and localization. It divides images into grids, predicts bounding boxes and class probabilities per grid cell, uses anchor-free detection, and applies NMS for final predictions. I've trained custom YOLOv8 models on 5,000+ images."
+        },
+        {
+          "question": "How would you integrate MediaPipe with YOLOv8 for multimodal detection?",
+          "answer_framework": "I implemented this in the proctoring system. YOLOv8 detects objects (phones, papers) while MediaPipe tracks poses and hand landmarks. Both run in parallel threads, outputs are synchronized by frame timestamp, combined detections feed into a decision engine. This multimodal approach improved accuracy by 25% compared to single-model detection."
+        },
+        {
+          "question": "Describe how RAG systems use vector databases for retrieval.",
+          "answer_framework": "RAG embeds documents into vector space using models like sentence-transformers, stores them in vector databases (I use Upstash Vector), then retrieves relevant chunks via semantic similarity search at query time. The retrieved context augments the LLM prompt. I implemented this in my Digital Twin system for interview preparation, achieving high relevance in responses."
+        },
+        {
+          "question": "How do you optimize model inference speed?",
+          "answer_framework": "I use multiple techniques: model quantization (FP32 to INT8), batch processing, GPU acceleration, removing unnecessary layers, using TensorRT for NVIDIA GPUs, and profiling bottlenecks with tools like cProfile. In the proctoring system, I optimized from 10 FPS to 30 FPS through quantization and pipeline parallelization."
+        }
+      ],
+      "situational": [
+        {
+          "question": "If your model misclassifies a cheating instance, how would you debug and improve it?",
+          "answer_framework": "I follow a systematic approach: 1) Analyze the failure case and collect similar examples, 2) Check if it's a data problem (add more training examples), model problem (adjust architecture/hyperparameters), or threshold issue, 3) Use confusion matrix and per-class metrics to identify patterns, 4) Implement fixes and validate with A/B testing, 5) Monitor production metrics continuously."
+        },
+        {
+          "question": "How would you design a scalable proctoring system for 1000+ students?",
+          "answer_framework": "I'd use: 1) Microservices architecture with load balancers, 2) Distributed inference with model serving frameworks like TorchServe, 3) Message queues (RabbitMQ) for asynchronous processing, 4) Cloud infrastructure (AWS/GCP) with auto-scaling, 5) Caching strategies for common queries, 6) Database sharding for performance, 7) Monitoring and alerting with Prometheus/Grafana."
+        },
+        {
+          "question": "How would you approach a project with unclear requirements?",
+          "answer_framework": "I'd: 1) Schedule discovery sessions with stakeholders to understand goals, 2) Create user stories and acceptance criteria, 3) Build a minimal prototype for feedback, 4) Use agile methodology with 2-week sprints, 5) Maintain regular communication and demos, 6) Document decisions and assumptions, 7) Stay flexible and iterate based on feedback."
+        }
+      ],
+      "company_research": {
+        "research_areas": [
+          "AI ethics in surveillance and privacy",
+          "Cloud deployment optimization for ML models",
+          "Real-time inference performance tuning",
+          "Scalable ML systems architecture",
+          "Computer vision in production environments"
+        ],
+        "preparation_questions": [
+          "What excites you about our AI research?",
+          "How do your projects align with our mission?",
+          "What unique perspective do you bring to our team?",
+          "Where do you see AI heading in the next 5 years?"
+        ]
+      }
+    },
+    "weakness_mitigation": [
+      {
+        "weakness": "Limited C++ production experience (CRITICAL - interview feedback)",
+        "mitigation": "Actively building C++ project portfolio: 1) Multi-threaded image processor, 2) Custom memory allocator, 3) Real-time C++ object tracker. Committing 10 hours/week to C++ development. Reading 'Effective Modern C++' and participating in C++ code reviews.",
+        "progress": "Started 3 C++ projects, completed 40% of first project, practicing daily with LeetCode C++ problems",
+        "timeline": "Target production-level C++ proficiency by March 2025",
+        "honesty": "Currently basic level, but rapidly improving with focused effort"
+      },
+      {
+        "weakness": "Limited deployment experience on production cloud pipelines",
+        "mitigation": "Currently learning Vercel CI/CD pipelines and Dockerized FastAPI deployment for scalable inference. Have hands-on experience with AWS EC2 deployment and actively pursuing AWS Cloud Practitioner certification.",
+        "progress": "Deployed Digital Twin RAG system on Vercel, containerized proctoring system with Docker"
+      },
+      {
+        "weakness": "Early in career with limited industry experience",
+        "mitigation": "Compensating with strong academic research background, hands-on projects with real-world impact, and continuous learning. Open to mentorship and eager to learn from experienced engineers.",
+        "progress": "Led production deployment affecting 500+ users, published research paper, active in open-source community",
+        "strength": "Fresh perspective, up-to-date with latest AI technologies, hungry to prove myself"
+      },
+      {
+        "weakness": "Limited experience with large-scale distributed systems",
+        "mitigation": "Studying distributed systems architecture, microservices patterns, and cloud scalability best practices. Actively learning Kubernetes and container orchestration.",
+        "progress": "Implemented basic microservices architecture in recent projects, studying system design patterns"
+      },
+      {
+        "weakness": "May appear overqualified for entry-level roles (interview feedback)",
+        "mitigation": "Emphasizing genuine interest in learning fundamentals, building strong engineering foundation, and contributing to team success. Willing to start in junior roles with clear AI specialization path.",
+        "approach": "Positioning AI skills as value-add, not replacement for core engineering work. Showing enthusiasm for mentorship and growth.",
+        "realistic_fit": "Best suited for 'Junior AI Engineer' roles, not 'Generic Programmer' positions"
+      }
+    ],
+    "key_talking_points": [
+      "92% detection accuracy in production computer vision system serving 500+ students",
+      "Led team of 3 through complete ML development lifecycle - architecture to deployment",
+      "Optimized model inference 3x (10 FPS → 30 FPS) through quantization and pipeline optimization",
+      "Built end-to-end AI systems from research to production deployment",
+      "Strong foundation in both computer vision (YOLOv8, MediaPipe) and NLP/RAG systems",
+      "Published research and presented to academic panels - strong technical communication",
+      "Reduced false positives by 70% through systematic debugging and ensemble methods",
+      "Experience with modern ML stack: YOLOv8, TensorFlow, RAG, vector databases, FastAPI",
+      "Proactively addressing skill gaps (C++) with dedicated learning plan and portfolio building",
+      "Open to junior roles with AI specialization path - prioritize learning over maximum salary"
+    ],
+    "interview_red_flags_to_address": [
+      {
+        "red_flag": "Overqualification for entry-level roles",
+        "how_to_address": "I understand my AI experience might seem advanced, but I'm genuinely excited about building strong software engineering fundamentals. I see this as an opportunity to learn from experienced engineers while contributing my AI skills where valuable. I'm looking for a long-term growth path, not just a stepping stone.",
+        "key_message": "AI skills are bonus, not replacement for core engineering work"
+      },
+      {
+        "red_flag": "C++ skills gap for C++ roles",
+        "how_to_address": "You're right that my C++ experience is limited compared to Python. I'm actively building 3 C++ projects and dedicating 10 hours/week to strengthen this. I can show you my progress on GitHub. For this role, I'm confident I can ramp up quickly with mentorship. Would you be open to a small coding test to assess my C++ fundamentals?",
+        "key_message": "Honest about gap + concrete action plan + willingness to prove competency"
+      },
+      {
+        "red_flag": "Salary expectations too high",
+        "how_to_address": "I've done more research and understand that ₱800K-1M is more appropriate for senior roles. For this position, I'm flexible and prioritize learning opportunities and AI project work over maximum salary. What's the budget range for this role, and is there room for growth as I prove my value?",
+        "key_message": "Realistic expectations + growth-focused mindset"
+      },
+      {
+        "red_flag": "Flight risk - will leave for AI role",
+        "how_to_address": "I appreciate the concern. I'm specifically targeting roles with AI components or clear paths to AI work. If this role involves [specific AI aspects from job posting], that aligns perfectly with my goals. Can you share more about AI projects in the pipeline and opportunities for specialization?",
+        "key_message": "Seeking alignment, not just any job"
+      }
+    ]
+  },
+  "professional_development": {
+    "recent_learning": [
+      {"topic": "MCP Server Protocol", "status": "Completed", "application": "Implemented in Digital Twin RAG system"},
+      {"topic": "Upstash Vector RAG Implementation", "status": "Completed", "application": "Production deployment in interview assistant"},
+      {"topic": "Computer Vision Model Optimization", "status": "Ongoing", "application": "Achieved 3x inference speedup in proctoring system"},
+      {"topic": "AWS Cloud Architecture", "status": "In Progress", "application": "Preparing for AWS certification"},
+      {"topic": "Docker & Kubernetes", "status": "In Progress", "application": "Containerization of ML applications"},
+      {"topic": "System Design & Scalability", "status": "Ongoing", "application": "Designing distributed ML systems"}
+    ],
+    "conferences_attended": [
+      {"name": "AI Research Symposium 2024", "role": "Presenter", "topic": "Real-time Computer Vision for Academic Integrity"},
+      {"name": "PyCon PH 2024", "role": "Attendee", "learnings": "ML deployment best practices, Python optimization techniques"}
+    ],
+    "publications": [
+      {
+        "title": "Powered Proctoring: Real-time Exam Cheating Detection System Using YOLOv8 and MediaPipe",
+        "type": "Research Paper",
+        "year": 2025,
+        "status": "Published",
+        "venue": "St. Paul University Research Journal",
+        "impact": "Cited in 3 follow-up studies on AI in education"
+      }
+    ],
+    "open_source": [
+      {"project": "YOLOv8", "role": "Contributor", "contributions": "Active in GitHub discussions, reported bugs, shared training tips"},
+      {"project": "Internal Python ML Utilities", "role": "Maintainer", "contributions": "Developed reusable components for academic AI research, used by 5+ research projects"}
+    ],
+    "online_presence": {
+      "technical_blog": "Writing about computer vision, ML optimization, and RAG systems",
+      "github_activity": "Regular commits, maintained projects with documentation",
+      "stack_overflow": "Answering questions on Python, TensorFlow, and computer vision"
+    },
+    "continuous_improvement": {
+      "daily_practices": ["Code review, Reading research papers, Hands-on experimentation"],
+      "learning_resources": ["Coursera ML courses, YouTube tutorials, Technical documentation"],
+      "goals_2025": ["AWS certification", "Contribute to major open-source ML project", "Build production-grade ML SaaS product"]
+    }
+  },
+  "self_awareness_career_fit": {
+    "realistic_role_assessment": {
+      "ideal_fits": [
+        "Junior AI/ML Engineer - leverages my computer vision skills while building engineering fundamentals",
+        "Computer Vision Developer - directly applies my YOLOv8/MediaPipe expertise",
+        "AI Research Engineer - combines academic background with production development",
+        "Software Engineer (AI Team) - general engineering with AI specialization",
+        "ML Platform Engineer - if role involves model deployment pipelines"
+      ],
+      "moderate_fits": [
+        "Full-Stack Developer with AI projects - can contribute backend/frontend, add AI value",
+        "Junior Software Engineer (with AI roadmap) - willing to start general if clear path to AI work",
+        "Data Engineer - relevant for ML pipelines, but less aligned with CV/NLP interests"
+      ],
+      "poor_fits": [
+        "Entry-level Programmer (no AI component) - risk of boredom and flight within 6-12 months",
+        "Senior C++ Developer - C++ skills gap too large currently",
+        "Pure Frontend Developer - limited AI application opportunities",
+        "Maintenance Engineer for legacy systems - misaligned with growth trajectory"
+      ]
+    },
+    "honest_career_priorities": {
+      "must_haves": [
+        "Opportunities to work with AI/ML technologies (70%+ of work)",
+        "Learning environment with mentorship from experienced engineers",
+        "Modern tech stack (Python, cloud platforms, ML frameworks)",
+        "Collaborative team culture",
+        "Clear career progression path toward AI specialization"
+      ],
+      "nice_to_haves": [
+        "Computer vision or NLP projects",
+        "Research-oriented culture",
+        "Startup environment with fast iteration",
+        "Remote/hybrid flexibility",
+        "Conference attendance and learning budget"
+      ],
+      "deal_breakers": [
+        "No AI/ML work for 1+ years (will feel underutilized)",
+        "Toxic team culture or lack of mentorship",
+        "Outdated tech stack with no modernization plan",
+        "Role significantly below skill level with no growth path"
+      ]
+    },
+    "retention_honesty": {
+      "will_stay_long_term_if": [
+        "Role involves meaningful AI/ML work aligned with my skills",
+        "Clear learning and growth opportunities",
+        "Team values innovation and technical excellence",
+        "Compensation is fair for contributions",
+        "Work has measurable impact"
+      ],
+      "flight_risk_indicators": [
+        "Generic programming role with no AI work (high risk within 6 months)",
+        "Feeling overqualified with no challenge (medium risk within 12 months)",
+        "Better AI opportunity elsewhere (depends on company investment in me)"
+      ],
+      "commitment_approach": "I want to find a role where I can grow for 2-3+ years, not just 'any job'. I'm willing to start junior if there's a clear path to AI specialization. I value loyalty and impact over title-hopping."
+    },
+    "interview_transparency": {
+      "when_to_be_honest": [
+        "If C++ role requires production C++ experience - admit gap and show learning plan",
+        "If salary expectations are misaligned - negotiate realistically",
+        "If role seems too junior - probe for AI growth opportunities",
+        "If asked about long-term plans - share AI career vision authentically"
+      ],
+      "how_to_frame_honestly": [
+        "C++ Gap: 'I'm currently basic in C++, but here's my 3-month plan to reach production level. Would you be open to assessing my progress with a coding test?'",
+        "Overqualification: 'I understand the concern. I'm specifically seeking roles with [AI component] to build engineering fundamentals while applying my strengths.'",
+        "Salary: 'I've adjusted my expectations based on market research. For this role, I'm targeting ₱[realistic range] with growth as I prove value.'",
+        "Career Goals: 'Long-term, I aim to specialize in AI systems. Does this role offer opportunities to work on AI projects or transition to AI team?'"
+      ]
+    }
+  },
+  "additional_info": {
+    "availability": {
+      "notice_period": "2 weeks (after graduation)",
+      "start_date": "June 2025 or earlier",
+      "full_time_availability": true
+    },
+    "work_preferences": {
+      "team_size": "Prefer small to medium teams (5-20 people)",
+      "work_style": "Collaborative with independent execution",
+      "learning_environment": "Values mentorship and continuous learning",
+      "project_preference": "Hands-on technical work with measurable impact"
+    },
+    "personal_attributes": {
+      "strengths": ["Quick learner", "Strong problem solver", "Detail-oriented", "Self-motivated", "Team player"],
+      "work_ethic": "Consistently delivers high-quality work, meets deadlines, proactive communicator",
+      "passion_areas": ["AI for social good", "Real-time systems", "Bridging research and production"]
+    },
+    "languages": [
+      {"language": "English", "proficiency": "Fluent (Professional working proficiency)"},
+      {"language": "Filipino", "proficiency": "Native"}
+    ],
+    "hobbies_interests": [
+      "Building side projects with emerging AI technologies",
+      "Contributing to open-source ML tools",
+      "Reading AI research papers and blogs",
+      "Participating in online ML communities"
+    ]
+  }
+}
