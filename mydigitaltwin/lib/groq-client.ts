@@ -33,12 +33,12 @@ export function getGroqClient(): Groq {
  * Groq Model Options
  * Choose based on your use case:
  * - llama-3.1-8b-instant: Fast, good for query enhancement (recommended for preprocessing)
- * - llama-3.1-70b-versatile: Powerful, good for response formatting (recommended for post-processing)
+ * - llama-3.3-70b-versatile: Powerful, good for response formatting (recommended for post-processing)
  * - mixtral-8x7b-32768: Balanced performance and large context window
  */
 export const GroqModels = {
   FAST: 'llama-3.1-8b-instant',        // Best for query enhancement
-  POWERFUL: 'llama-3.1-70b-versatile', // Best for interview formatting
+  POWERFUL: 'llama-3.3-70b-versatile', // Best for interview formatting
   BALANCED: 'mixtral-8x7b-32768',      // Balanced option
 } as const;
 
