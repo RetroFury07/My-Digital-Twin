@@ -17,11 +17,12 @@ export interface RAGConfig {
 
 /**
  * Pre-configured settings for different interview types
+ * Updated to use currently supported Groq models
  */
 export const RAG_CONFIGS = {
   technical_interview: {
     queryModel: 'llama-3.1-8b-instant',
-    responseModel: 'llama-3.1-70b-versatile',
+    responseModel: 'llama-3.3-70b-versatile', // Updated from decommissioned model
     queryTemperature: 0.3,
     responseTemperature: 0.4,
     focusAreas: ['technical skills', 'problem solving', 'architecture', 'code quality', 'debugging', 'optimization'],
@@ -33,7 +34,7 @@ export const RAG_CONFIGS = {
   
   behavioral_interview: {
     queryModel: 'llama-3.1-8b-instant', 
-    responseModel: 'llama-3.1-70b-versatile',
+    responseModel: 'llama-3.3-70b-versatile', // Updated from decommissioned model
     queryTemperature: 0.3,
     responseTemperature: 0.7,
     focusAreas: ['leadership', 'teamwork', 'communication', 'conflict resolution', 'adaptability', 'growth mindset'],
@@ -44,8 +45,8 @@ export const RAG_CONFIGS = {
   } as RAGConfig,
   
   executive_interview: {
-    queryModel: 'llama-3.1-70b-versatile',
-    responseModel: 'llama-3.1-70b-versatile', 
+    queryModel: 'llama-3.3-70b-versatile', // Updated from decommissioned model
+    responseModel: 'llama-3.3-70b-versatile', // Updated from decommissioned model
     queryTemperature: 0.4,
     responseTemperature: 0.5,
     focusAreas: ['strategic thinking', 'business impact', 'vision', 'leadership', 'stakeholder management', 'ROI'],
@@ -57,7 +58,7 @@ export const RAG_CONFIGS = {
 
   system_design_interview: {
     queryModel: 'llama-3.1-8b-instant',
-    responseModel: 'llama-3.1-70b-versatile',
+    responseModel: 'llama-3.3-70b-versatile', // Updated from decommissioned model
     queryTemperature: 0.3,
     responseTemperature: 0.4,
     focusAreas: ['scalability', 'architecture', 'trade-offs', 'distributed systems', 'performance', 'reliability'],
@@ -69,7 +70,7 @@ export const RAG_CONFIGS = {
 
   general_interview: {
     queryModel: 'llama-3.1-8b-instant',
-    responseModel: 'llama-3.1-70b-versatile',
+    responseModel: 'llama-3.3-70b-versatile', // Updated from decommissioned model
     queryTemperature: 0.3,
     responseTemperature: 0.6,
     focusAreas: ['experience', 'skills', 'achievements', 'growth', 'passion', 'culture fit'],
