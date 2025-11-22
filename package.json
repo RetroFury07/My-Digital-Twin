@@ -1,0 +1,14 @@
+{
+  "name": "digital-twin-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd mydigitaltwin && npm run dev",
+    "build": "cd mydigitaltwin && npm install && npm run build",
+    "start": "cd mydigitaltwin && npm start",
+    "install": "cd mydigitaltwin && npm install"
+  },
+  "workspaces": [
+    "mydigitaltwin"
+  ]
+}
