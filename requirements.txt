@@ -1,9 +1,1 @@
-# Core dependencies for Digital Twin embedding workflow
-python-dotenv>=1.0.1
-openai>=1.51.0
-upstash-vector>=0.4.0
-sentence-transformers>=2.2.2
-# Likely used elsewhere in the repo (chat/server)
-groq>=0.13.1
-# Dev/test
-pytest>=8.3.3
+groq==0.11.0
