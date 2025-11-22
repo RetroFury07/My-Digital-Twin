@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd mydigitaltwin && npm run build",
+  "devCommand": "cd mydigitaltwin && npm run dev",
+  "installCommand": "cd mydigitaltwin && npm install",
+  "framework": "nextjs",
+  "outputDirectory": "mydigitaltwin/.next"
+}
