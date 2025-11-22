@@ -2,6 +2,7 @@
 Vercel Serverless Function for Digital Twin RAG
 """
 
+from http.server import BaseHTTPRequestHandler
 import os
 import json
 from groq import Groq
@@ -35,7 +36,7 @@ When answering questions, speak in first person as if you are me describing my b
 def generate_answer(question: str) -> str:
     """Generate answer using Groq"""
     if not groq_client:
-        return "Sorry, the AI service is not configured properly."
+        return "Sorry, the AI service is not configured properly. Please add GROQ_API_KEY environment variable."
     
     try:
         completion = groq_client.chat.completions.create(
@@ -52,58 +53,59 @@ def generate_answer(question: str) -> str:
         return f"Error generating response: {str(e)}"
 
 
-def handler(request):
-    """Vercel serverless function handler"""
-    from http.server import BaseHTTPRequestHandler
+class handler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        """Handle POST requests"""
+        try:
+            # Read request body
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length).decode('utf-8')
+            data = json.loads(body)
+            
+            question = data.get("question", "").strip()
+            
+            if not question:
+                self.send_response(400)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "'question' must be a non-empty string"}).encode())
+                return
+            
+            # Generate answer
+            answer = generate_answer(question)
+            
+            # Send response
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.end_headers()
+            self.wfile.write(json.dumps({"answer": answer}).encode())
+            
+        except Exception as e:
+            self.send_response(500)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.end_headers()
+            self.wfile.write(json.dumps({"error": str(e)}).encode())
     
-    # CORS headers
-    headers = {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Content-Type": "application/json"
-    }
+    def do_OPTIONS(self):
+        """Handle OPTIONS requests for CORS"""
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.end_headers()
     
-    # Handle preflight requests
-    if request.method == "OPTIONS":
-        return {
-            "statusCode": 200,
-            "headers": headers,
-            "body": ""
-        }
-    
-    # Only allow POST
-    if request.method != "POST":
-        return {
-            "statusCode": 405,
-            "headers": headers,
-            "body": json.dumps({"error": "Method not allowed"})
-        }
-    
-    try:
-        # Parse request body
-        body = json.loads(request.body.decode('utf-8') if isinstance(request.body, bytes) else request.body)
-        question = body.get("question", "").strip()
-        
-        if not question:
-            return {
-                "statusCode": 400,
-                "headers": headers,
-                "body": json.dumps({"error": "'question' must be a non-empty string"})
-            }
-        
-        # Generate answer
-        answer = generate_answer(question)
-        
-        return {
-            "statusCode": 200,
-            "headers": headers,
-            "body": json.dumps({"answer": answer})
-        }
-        
-    except Exception as e:
-        return {
-            "statusCode": 500,
-            "headers": headers,
-            "body": json.dumps({"error": str(e)})
-        }
+    def do_GET(self):
+        """Handle GET requests - health check"""
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        self.wfile.write(json.dumps({
+            "status": "ok",
+            "service": "Digital Twin RAG API",
+            "groq_configured": groq_client is not None
+        }).encode())
+

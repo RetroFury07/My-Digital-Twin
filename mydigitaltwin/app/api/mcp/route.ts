@@ -8,18 +8,18 @@ export async function POST(request: NextRequest) {
     // In production (Vercel), use the Python serverless function
     // In development, use local backend
     const isProduction = process.env.VERCEL === '1';
-    const serverUrl = isProduction 
-      ? '/api/rag'  // Vercel serverless function
-      : (process.env.DIGITAL_TWIN_BACKEND_URL || 'http://localhost:8000');
+    const apiUrl = isProduction 
+      ? `${request.nextUrl.origin}/api/rag`  // Vercel serverless function (full URL)
+      : `${process.env.DIGITAL_TWIN_BACKEND_URL || 'http://localhost:8000'}/rag`;
     
-    console.log('Forwarding request to:', serverUrl);
+    console.log('Forwarding request to:', apiUrl);
     
     // Transform 'query' to 'question' for backend compatibility
     const backendPayload = {
       question: body.query || body.question
     };
     
-    const response = await fetch(`${serverUrl}/rag`, {
+    const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
