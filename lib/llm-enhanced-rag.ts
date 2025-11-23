@@ -11,9 +11,19 @@ import {
   type RAGConfig 
 } from './rag-config';
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY!,
-});
+// Lazy initialization of Groq client to avoid build-time errors
+let groqClient: Groq | null = null;
+
+function getGroq(): Groq {
+  if (!groqClient) {
+    const apiKey = process.env.GROQ_API_KEY;
+    if (!apiKey) {
+      throw new Error('GROQ_API_KEY is not configured');
+    }
+    groqClient = new Groq({ apiKey });
+  }
+  return groqClient;
+}
 
 /**
  * Enhance user queries with context-aware optimization
@@ -42,6 +52,7 @@ export async function enhanceQuery(
   console.log(`[LLM Query Enhancement] Detected interview type: ${detectedType}`);
 
   try {
+    const groq = getGroq();
     const completion = await groq.chat.completions.create({
       messages: [{ role: 'user', content: enhancementPrompt }],
       model: autoConfig.queryModel,
@@ -147,6 +158,7 @@ export async function formatForInterview(
   console.log(`[LLM Response Formatting] Using ${detectedType} configuration`);
 
   try {
+    const groq = getGroq();
     const completion = await groq.chat.completions.create({
       messages: [{ role: 'user', content: formattingPrompt }],
       model: autoConfig.responseModel,
@@ -255,5 +267,10 @@ export async function executeEnhancedRAG(
  * Check if query enhancement is available
  */
 export function isQueryEnhancementAvailable(): boolean {
-  return !!process.env.GROQ_API_KEY;
+  try {
+    return !!process.env.GROQ_API_KEY;
+  } catch (error) {
+    console.warn('[LLM] Failed to check GROQ_API_KEY availability:', error);
+    return false;
+  }
 }

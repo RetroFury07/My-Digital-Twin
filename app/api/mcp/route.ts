@@ -7,12 +7,15 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     
+    console.log('[MCP] Received request body:', JSON.stringify(body));
+    
     // Extract question from either 'query' or 'question' field
     const question = body.query || body.question;
     
     if (!question || typeof question !== 'string') {
+      console.error('[MCP] Invalid question:', { question, body });
       return NextResponse.json(
-        { error: 'Question is required and must be a string' },
+        { error: 'Question is required and must be a string', received: body },
         { status: 400 }
       );
     }
@@ -20,11 +23,21 @@ export async function POST(request: NextRequest) {
     console.log('[MCP] Processing question:', question.substring(0, 50) + '...');
     
     // Use the monitored RAG query with full pipeline
-    const result = await monitoredRAGQuery(question, undefined, {
-      useCache: true,
-      timeout: 15000,
-      fallbackToBasic: true,
-    });
+    let result;
+    try {
+      result = await monitoredRAGQuery(question, undefined, {
+        useCache: true,
+        timeout: 15000,
+        fallbackToBasic: true,
+      });
+    } catch (ragError) {
+      console.error('[MCP] RAG query failed completely:', ragError);
+      return NextResponse.json({
+        response: 'I apologize, but I encountered an error processing your question. Please try again.',
+        answer: 'I apologize, but I encountered an error processing your question. Please try again.',
+        error: ragError instanceof Error ? ragError.message : 'Unknown error',
+      }, { status: 200 }); // Return 200 with error message instead of 500
+    }
     
     console.log('[MCP] Response generated:', {
       cached: result.cached,

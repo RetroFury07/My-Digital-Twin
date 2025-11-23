@@ -155,14 +155,17 @@ class handler(BaseHTTPRequestHandler):
             body = self.rfile.read(content_length).decode('utf-8')
             data = json.loads(body)
             
-            question = data.get("question", "").strip()
+            # Accept both 'question' and 'query' fields for compatibility
+            question = data.get("question") or data.get("query", "")
+            if question:
+                question = question.strip()
             
             if not question:
                 self.send_response(400)
                 self.send_header('Content-Type', 'application/json')
                 self.send_header('Access-Control-Allow-Origin', '*')
                 self.end_headers()
-                self.wfile.write(json.dumps({"error": "'question' must be a non-empty string"}).encode())
+                self.wfile.write(json.dumps({"error": "Question is required and must be a non-empty string"}).encode())
                 return
             
             # Generate answer with advanced RAG

@@ -1,0 +1,222 @@
+{
+  "personalInfo": {
+    "name": "Xevi Olivas",
+    "title": "Aspiring AI Data Analyst / Developer",
+    "email": "xeviolivas@spup.edu.ph",
+    "location": "Philippines",
+    "summary": "Passionate AI/ML developer specializing in computer vision and RAG systems. Completed undergraduate thesis on AI-powered exam proctoring achieving 92% accuracy with 500+ student tests. Experienced in building production-ready AI systems using YOLOv8, MediaPipe, Next.js, and modern web frameworks.",
+    "tagline": "Building intelligent systems that solve real-world problems through AI/ML innovation"
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "institution": "St. Paul University Philippines",
+      "graduationDate": "June 2025",
+      "relevantCourses": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Structures & Algorithms",
+        "Database Management",
+        "Software Engineering",
+        "Web Development",
+        "Computer Vision"
+      ],
+      "achievements": [
+        "Completed thesis: Powered Proctoring - AI-Based Exam Monitoring System",
+        "Achieved 92% detection accuracy across 500+ student test sessions",
+        "Led team of developers in full-stack AI application development"
+      ],
+      "thesis": {
+        "title": "Powered Proctoring: AI-Based Exam Monitoring System",
+        "description": "Developed AI-powered proctoring system using YOLOv8 and MediaPipe for real-time cheating detection",
+        "achievements": [
+          "92% detection accuracy",
+          "Tested with 500+ students",
+          "Reduced manual proctoring workload by 75%"
+        ]
+      }
+    }
+  ],
+  "workExperience": [
+    {
+      "role": "Undergraduate Thesis Researcher",
+      "company": "St. Paul University Philippines",
+      "duration": "2024 - 2025",
+      "responsibilities": [
+        "Designed and implemented AI-powered exam proctoring system using YOLOv8 for object detection and MediaPipe for pose estimation",
+        "Achieved 92% accuracy in detecting cheating behaviors across 500+ student test sessions",
+        "Developed real-time violation detection system with automated flagging and reporting dashboard",
+        "Built full-stack application with React frontend and FastAPI backend integrating computer vision models",
+        "Conducted extensive testing and validation with university faculty and students"
+      ],
+      "achievements": [
+        "Processed 500+ exam sessions with 92% detection accuracy",
+        "Reduced manual proctoring time by 75% through automated monitoring",
+        "Successfully deployed in university testing environment"
+      ]
+    },
+    {
+      "role": "AI/ML Developer",
+      "company": "Personal Projects & Portfolio",
+      "duration": "2024 - Present",
+      "responsibilities": [
+        "Built Digital Twin RAG system using Next.js, Upstash Vector, and Groq API for intelligent portfolio assistant",
+        "Implemented advanced retrieval-augmented generation with semantic search and LLM-enhanced query processing",
+        "Developed monitoring system tracking RAG metrics including accuracy, latency, and retrieval quality",
+        "Created interactive portfolio website with dark mode, smooth animations, and responsive design",
+        "Integrated AI-powered chat widget for automated interview question answering"
+      ],
+      "achievements": [
+        "Deployed production RAG system on Vercel with 1.2s average response time",
+        "Achieved 85%+ retrieval accuracy through hybrid search and query enhancement",
+        "Built comprehensive monitoring dashboard tracking 8+ RAG performance metrics",
+        "Integrated 3 Groq LLM models (Llama 3.1, Llama 3.3, Mixtral) for optimal performance"
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "programmingLanguages": ["Python", "TypeScript", "JavaScript", "SQL", "HTML/CSS"],
+    "aiMlFrameworks": [
+      "YOLOv8",
+      "MediaPipe",
+      "TensorFlow",
+      "PyTorch",
+      "scikit-learn",
+      "OpenCV",
+      "Sentence Transformers"
+    ],
+    "webDevelopment": [
+      "Next.js 16",
+      "React",
+      "Node.js",
+      "FastAPI",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    "databases": ["Upstash Vector", "PostgreSQL", "MongoDB", "SQLite"],
+    "tools": ["Git/GitHub", "VS Code", "Docker", "Vercel", "Groq API", "Hugging Face"]
+  },
+  "softSkills": [
+    "Problem Solving - Designed novel approaches to complex AI challenges like real-time cheating detection",
+    "Team Leadership - Led thesis team through full development lifecycle",
+    "Research & Analysis - Conducted extensive academic research on computer vision and pose estimation",
+    "Communication - Presented technical findings to non-technical stakeholders and faculty",
+    "Adaptability - Quickly learned new technologies (RAG, vector databases, LLM APIs) for portfolio project",
+    "Time Management - Balanced multiple projects and academic commitments successfully"
+  ],
+  "projects": [
+    {
+      "name": "Powered Proctoring - AI Exam Monitoring System",
+      "description": "Undergraduate thesis project building AI-powered exam proctoring system using computer vision",
+      "technologies": [
+        "Python",
+        "YOLOv8",
+        "MediaPipe",
+        "OpenCV",
+        "React",
+        "FastAPI",
+        "TensorFlow"
+      ],
+      "highlights": [
+        "Achieved 92% accuracy detecting cheating behaviors (phone usage, multiple people, looking away)",
+        "Processed 500+ student exam sessions in real university testing environment",
+        "Implemented real-time object detection with YOLOv8 for phone/book detection",
+        "Used MediaPipe pose estimation for gaze tracking and body position analysis",
+        "Built violation flagging system with automated reporting dashboard",
+        "Reduced manual proctoring workload by 75% through intelligent automation"
+      ],
+      "link": "",
+      "impact": "Deployed in university environment, improved exam integrity monitoring efficiency by 75%, processed 500+ real student exams"
+    },
+    {
+      "name": "Digital Twin RAG Portfolio Assistant",
+      "description": "Production-ready RAG system with advanced retrieval and LLM integration for intelligent portfolio chat",
+      "technologies": [
+        "Next.js 16",
+        "TypeScript",
+        "Upstash Vector",
+        "Groq API",
+        "Llama 3.1/3.3",
+        "Sentence Transformers",
+        "Vercel",
+        "Tailwind CSS"
+      ],
+      "highlights": [
+        "Implemented semantic search with 1536-dimension embeddings using sentence-transformers",
+        "Integrated 3 Groq LLM models (Fast/Powerful/Balanced) for optimal response quality",
+        "Built query enhancement pipeline improving retrieval accuracy by 30%+",
+        "Created monitoring system tracking latency, accuracy, retrieval quality across 8+ metrics",
+        "Achieved 1.2s average response time with 85%+ retrieval accuracy",
+        "Developed personality-aware response system with STAR format interview answers",
+        "Deployed production system on Vercel with MCP server protocol"
+      ],
+      "link": "https://my-digital-twin-m79j-39sttgqmh-xevi-olivas-projects.vercel.app",
+      "impact": "Deployed production RAG system with 85%+ accuracy, automated interview responses, comprehensive monitoring dashboard"
+    },
+    {
+      "name": "Interactive Portfolio Website",
+      "description": "Modern responsive portfolio with smooth animations, dark mode, and AI chat integration",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Icons"
+      ],
+      "highlights": [
+        "Built 7-section portfolio (Home, About, Experience, Projects, Skills, Education, Contact)",
+        "Implemented smooth scrolling navigation with active section highlighting",
+        "Created dark mode toggle with persistent theme preference",
+        "Integrated AI-powered Digital Twin chat widget",
+        "Designed fully responsive layout for mobile/tablet/desktop",
+        "Used Framer Motion for elegant animations and transitions"
+      ],
+      "link": "https://my-digital-twin-m79j-39sttgqmh-xevi-olivas-projects.vercel.app",
+      "impact": "Professional portfolio showcasing technical skills with interactive AI assistant"
+    }
+  ],
+  "achievements": [
+    "Completed undergraduate thesis achieving 92% AI detection accuracy",
+    "Processed 500+ real student exam sessions in production environment",
+    "Deployed production RAG system with 85%+ retrieval accuracy",
+    "Achieved 1.2s average response time for AI assistant queries",
+    "Reduced manual proctoring workload by 75% through AI automation",
+    "Built comprehensive monitoring system tracking 8+ RAG metrics",
+    "Created interactive portfolio with dark mode and smooth animations"
+  ],
+  "interestsAndGoals": {
+    "interests": [
+      "Artificial Intelligence & Machine Learning",
+      "Computer Vision & Object Detection",
+      "Retrieval-Augmented Generation (RAG)",
+      "Natural Language Processing",
+      "Full-Stack Web Development",
+      "AI System Monitoring & Observability",
+      "Academic Integrity Technology"
+    ],
+    "careerGoals": [
+      "Secure AI/ML Developer or Data Analyst role building production AI systems",
+      "Work on computer vision projects with real-world impact",
+      "Contribute to RAG and LLM integration in enterprise applications",
+      "Build intelligent systems that solve complex problems through AI innovation",
+      "Continue learning cutting-edge AI/ML technologies and frameworks"
+    ]
+  },
+  "whyHireMe": {
+    "uniqueStrengths": [
+      "Proven track record delivering production AI systems (92% accuracy proctoring, 85%+ RAG accuracy)",
+      "Hands-on experience with modern AI stack (YOLOv8, Groq, RAG, vector databases)",
+      "Strong full-stack skills combining AI/ML backend with modern web frontend",
+      "Demonstrated ability to learn and implement new technologies quickly (RAG, LLM APIs)",
+      "Real-world deployment experience with 500+ users in university environment",
+      "Research mindset with academic rigor applied to practical problem-solving"
+    ],
+    "differentiators": [
+      "Built TWO production AI systems from scratch (thesis + portfolio RAG)",
+      "Academic research experience with thesis work",
+      "Comprehensive understanding of AI pipeline: data → model → deployment → monitoring",
+      "Passionate about AI innovation with portfolio demonstrating continuous learning",
+      "Strong communication skills presenting technical work to non-technical audiences"
+    ]
+  }
+}

@@ -4,6 +4,7 @@
  */
 
 import Groq from 'groq-sdk';
+import { XEVI_PERSONALITY, getSystemPrompt, detectQuestionType, getQuickResponse } from './enhanced-prompts';
 
 // Singleton Groq client instance
 let groqClient: Groq | null = null;
@@ -98,29 +99,37 @@ Return ONLY the enhanced query, no explanations:`;
 
 /**
  * Interview Response Formatting using Groq
- * Uses powerful model for high-quality STAR format responses
+ * Uses powerful model for high-quality responses with Xevi's personality
  */
 export async function formatForInterviewWithGroq(
   context: string,
   originalQuestion: string,
   model: GroqModel = GroqModels.POWERFUL
 ): Promise<string> {
+  // Check for quick response templates first
+  const quickResponse = getQuickResponse(originalQuestion);
+  if (quickResponse) {
+    console.log('[Groq] Using quick response template');
+    return quickResponse;
+  }
+
   const client = getGroqClient();
+  const questionType = detectQuestionType(originalQuestion);
+  const systemPrompt = getSystemPrompt(questionType);
 
-  const interviewPrompt = `You are an expert interview coach helping format responses for technical interviews.
-
-Retrieved Context:
+  const interviewPrompt = `Retrieved Context:
 ${context}
 
-Original Question: ${originalQuestion}
+Question: ${originalQuestion}
 
-Using the context above, create an interview-ready response that:
-- Uses STAR format (Situation, Task, Action, Result) if describing past work
-- Includes specific metrics and achievements from the context
-- Sounds confident, natural, and conversational
-- Is concise but complete (2-4 sentences for simple questions, more for complex)
-- Speaks in first person
-- Directly addresses the question
+Using the context above, create a response that:
+- Speaks as Xevi Olivas in first person
+- Includes specific metrics and achievements
+- References relevant projects (Powered Proctoring, Digital Twin, etc.)
+- Uses STAR format for project descriptions when appropriate
+- Sounds confident, natural, and enthusiastic
+- Is concise but complete (2-4 sentences for simple questions)
+- Shows problem-solving approach
 
 Provide ONLY the formatted response:`;
 
@@ -130,14 +139,14 @@ Provide ONLY the formatted response:`;
       messages: [
         {
           role: 'system',
-          content: 'You are an AI assistant helping format professional interview responses. Always speak in first person and include specific metrics when available.',
+          content: systemPrompt,
         },
         {
           role: 'user',
           content: interviewPrompt,
         },
       ],
-      temperature: 0.7, // Balanced temperature for natural responses
+      temperature: 0.7,
       max_tokens: 600,
     });
 
@@ -148,17 +157,17 @@ Provide ONLY the formatted response:`;
       return 'Unable to format response';
     }
 
-    console.log('[Groq] Response formatted for interview context');
+    console.log('[Groq] Response formatted with Xevi\'s personality');
     return formattedResponse;
   } catch (error) {
     console.error('[Groq] Formatting error:', error);
-    throw error; // Propagate error for fallback handling
+    throw error;
   }
 }
 
 /**
- * Generate basic response using Groq
- * Direct question answering without preprocessing/post-processing
+ * Generate basic response using Groq with Xevi's personality
+ * Direct question answering with enhanced system prompt
  */
 export async function generateResponseWithGroq(
   question: string,
@@ -166,12 +175,15 @@ export async function generateResponseWithGroq(
   model: GroqModel = GroqModels.BALANCED
 ): Promise<string> {
   const client = getGroqClient();
+  const questionType = detectQuestionType(question);
+  const systemPrompt = getSystemPrompt(questionType);
 
-  const prompt = `${context}
+  const prompt = `Context from Xevi's profile:
+${context}
 
 Question: ${question}
 
-Provide a helpful, professional response in first person:`;
+Provide a response as Xevi Olivas:`;
 
   try {
     const completion = await client.chat.completions.create({
@@ -179,7 +191,7 @@ Provide a helpful, professional response in first person:`;
       messages: [
         {
           role: 'system',
-          content: 'You are an AI digital twin representing a professional software developer. Answer in first person with specific examples.',
+          content: systemPrompt,
         },
         {
           role: 'user',
