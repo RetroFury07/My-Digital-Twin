@@ -150,7 +150,7 @@ export function enrichWithMicroStory(response: string, questionContext: string):
 export const VERBAL_FILLERS = {
   thinking: ['Well,', 'You know,', 'Actually,', 'Honestly,', 'To be honest,', 'Frankly,'],
   emphasis: ['The key thing is,', "What's really interesting is,", 'The breakthrough was,', 'What made this work was,'],
-  transition: ['For instance,', 'For example,', 'Case in point:', 'Here's what I mean:', 'Let me illustrate:'],
+  transition: ['For instance,', 'For example,', 'Case in point:', "Here's what I mean:", 'Let me illustrate:'],
 };
 
 /**

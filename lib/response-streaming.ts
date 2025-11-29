@@ -28,7 +28,7 @@ export class ResponseStreamer {
   /**
    * Calculate realistic delay based on human typing patterns
    */
-  private calculateDelay(char: string, prevChar: string): number {
+  protected calculateDelay(char: string, prevChar: string): number {
     const baseDelay = 60000 / (this.config.wordsPerMinute * 5); // 5 chars per word avg
 
     // Longer pauses after punctuation (more human-like)
@@ -114,7 +114,7 @@ export class ResponseStreamer {
     }
   }
 
-  private sleep(ms: number): Promise<void> {
+  protected sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
