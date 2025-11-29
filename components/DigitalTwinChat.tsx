@@ -1,12 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMessageCircle, FiX, FiSend } from 'react-icons/fi';
+import { FiMessageCircle, FiX, FiSend, FiCpu, FiZap } from 'react-icons/fi';
+import { ConversationManager } from '@/lib/conversation-manager';
+import { analyzeSentiment, getTonePrompt, addPersonalityMarkers, detectInterviewQuestionType, getResponseFramework } from '@/lib/emotional-intelligence';
 
 interface Message {
   role: 'user' | 'assistant';
   content: string;
+  timestamp?: Date;
+  isStreaming?: boolean;
 }
 
 interface DigitalTwinChatProps {
@@ -19,41 +23,142 @@ export default function DigitalTwinChat({ darkMode }: DigitalTwinChatProps) {
     {
       role: 'assistant',
       content: "Hi! I'm Xevi's Digital Twin. Ask me anything about Xevi's skills, projects, or experience!",
+      timestamp: new Date(),
     },
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
+  const [followUpSuggestions, setFollowUpSuggestions] = useState<string[]>([]);
+  const conversationManager = useRef(new ConversationManager());
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom when new messages arrive
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  // Simulate progressive typing for assistant responses
+  const simulateTyping = async (fullText: string) => {
+    setIsTyping(true);
+    
+    // Start with empty message
+    const messageIndex = messages.length;
+    setMessages(prev => [...prev, { 
+      role: 'assistant', 
+      content: '', 
+      timestamp: new Date(),
+      isStreaming: true 
+    }]);
+
+    // Stream text word by word for more natural feel
+    const words = fullText.split(' ');
+    let accumulated = '';
+
+    for (let i = 0; i < words.length; i++) {
+      accumulated += (i > 0 ? ' ' : '') + words[i];
+      
+      setMessages(prev => {
+        const updated = [...prev];
+        updated[messageIndex] = {
+          role: 'assistant',
+          content: accumulated,
+          timestamp: new Date(),
+          isStreaming: true,
+        };
+        return updated;
+      });
+
+      // Realistic delay between words (100-200ms)
+      await new Promise(resolve => setTimeout(resolve, 100 + Math.random() * 100));
+    }
+
+    // Mark streaming complete
+    setMessages(prev => {
+      const updated = [...prev];
+      updated[messageIndex].isStreaming = false;
+      return updated;
+    });
+
+    setIsTyping(false);
+  };
 
   const handleSend = async () => {
-    if (!input.trim()) return;
+    if (!input.trim() || loading) return;
 
-    const userMessage: Message = { role: 'user', content: input };
+    const userMessage: Message = { 
+      role: 'user', 
+      content: input,
+      timestamp: new Date(),
+    };
+    
     setMessages((prev) => [...prev, userMessage]);
+    
+    // Add to conversation context
+    conversationManager.current.addTurn('user', input);
+
+    // Analyze sentiment
+    const sentiment = analyzeSentiment(input);
+    const questionType = detectInterviewQuestionType(input);
+    
+    console.log('Detected sentiment:', sentiment.sentiment);
+    console.log('Question type:', questionType);
+
+    const currentInput = input;
     setInput('');
     setLoading(true);
 
     try {
+      // Get contextual query (handles follow-ups)
+      const contextualQuery = conversationManager.current.getContextualQuery(currentInput);
+      
+      // Show thinking indicator
+      setIsTyping(true);
+      
       const response = await fetch('/api/mcp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: input }),
+        body: JSON.stringify({ 
+          query: contextualQuery,
+          sentiment: sentiment.sentiment,
+          questionType,
+          tone: sentiment.suggestedTone,
+          conversationContext: conversationManager.current.getContextForLLM(),
+        }),
       });
 
       const data = await response.json();
-      const assistantMessage: Message = {
-        role: 'assistant',
-        content: data.response || "I'm here to help! Ask me about Xevi's background.",
-      };
-      setMessages((prev) => [...prev, assistantMessage]);
+      let responseText = data.response || "I'm here to help! Ask me about Xevi's background.";
+
+      // Add personality markers based on sentiment
+      responseText = addPersonalityMarkers(responseText, sentiment.sentiment, true);
+
+      // Add to conversation context
+      conversationManager.current.addTurn('assistant', responseText);
+
+      // Generate follow-up suggestions
+      const suggestions = conversationManager.current.generateFollowUps(responseText);
+      setFollowUpSuggestions(suggestions);
+
+      // Simulate progressive typing
+      setIsTyping(false);
+      await simulateTyping(responseText);
+      
     } catch (error) {
+      setIsTyping(false);
       const errorMessage: Message = {
         role: 'assistant',
         content: 'Sorry, I encountered an error. Please try again later.',
+        timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    setInput(suggestion);
   };
 
   return (
@@ -100,31 +205,78 @@ export default function DigitalTwinChat({ darkMode }: DigitalTwinChatProps) {
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div
-                    className={`max-w-[80%] p-3 rounded-lg ${
-                      msg.role === 'user'
-                        ? 'bg-blue-600 text-white'
-                        : darkMode
-                        ? 'bg-gray-700 text-white'
-                        : 'bg-gray-200 text-gray-900'
-                    }`}
-                  >
-                    {msg.content}
+                  <div className="flex flex-col max-w-[80%]">
+                    <div
+                      className={`p-3 rounded-lg ${
+                        msg.role === 'user'
+                          ? 'bg-blue-600 text-white'
+                          : darkMode
+                          ? 'bg-gray-700 text-white'
+                          : 'bg-gray-200 text-gray-900'
+                      } ${msg.isStreaming ? 'streaming-cursor' : ''}`}
+                    >
+                      {msg.content}
+                      {msg.isStreaming && (
+                        <span className="inline-block w-0.5 h-4 ml-1 bg-current animate-pulse" />
+                      )}
+                    </div>
+                    {msg.timestamp && (
+                      <span className={`text-xs mt-1 ${darkMode ? 'text-gray-500' : 'text-gray-400'} ${msg.role === 'user' ? 'text-right' : ''}`}>
+                        {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                      </span>
+                    )}
                   </div>
                 </motion.div>
               ))}
-              {loading && (
-                <div className="flex justify-start">
-                  <div className={`p-3 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                    <div className="flex space-x-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" />
-                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-100" />
-                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-200" />
+              
+              {/* Enhanced Typing Indicator */}
+              {(loading || isTyping) && (
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="flex justify-start"
+                >
+                  <div className={`p-3 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-gray-200'} flex items-center space-x-2`}>
+                    <FiCpu className="animate-spin text-blue-500" size={16} />
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
                     </div>
+                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      {isTyping ? 'Typing...' : 'Thinking...'}
+                    </span>
                   </div>
-                </div>
+                </motion.div>
               )}
+              
+              <div ref={messagesEndRef} />
             </div>
+
+            {/* Follow-up Suggestions */}
+            {followUpSuggestions.length > 0 && !loading && (
+              <div className={`px-4 py-2 border-t ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                <p className={`text-xs mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                  <FiZap className="inline mr-1" size={12} />
+                  Suggested questions:
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {followUpSuggestions.slice(0, 2).map((suggestion, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleSuggestionClick(suggestion)}
+                      className={`text-xs px-3 py-1.5 rounded-full transition-colors ${
+                        darkMode
+                          ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
+                          : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                      }`}
+                    >
+                      {suggestion}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Input */}
             <div className={`p-4 border-t ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
